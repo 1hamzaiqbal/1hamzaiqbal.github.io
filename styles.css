@@ -1,15 +1,5 @@
 /* Variables */
 :root {
-<<<<<<< Updated upstream
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --light-color: #ecf0f1;
-    --dark-color: #2c3e50;
-    --text-color: #333;
-    --container-width: 1200px;
-    --transition: all 0.3s ease-in-out;
-=======
     --primary-color: #1e1e1e;
     --secondary-color: #3a86ff;
     --accent-color: #ff006e;
@@ -23,7 +13,6 @@
     --scanline-color: rgba(0, 0, 0, 0.03);
     --text-glow: 0 0 2px rgba(0, 0, 0, 0.5);
     --border-color: #1e1e1e;
->>>>>>> Stashed changes
 }
 
 /* Reset & Base Styles */
@@ -38,13 +27,9 @@ html {
 }
 
 body {
-<<<<<<< Updated upstream
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-=======
     font-family: 'Space Mono', monospace;
     background-color: var(--background);
     color: var(--text-color);
->>>>>>> Stashed changes
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
@@ -52,9 +37,6 @@ body {
 
 a {
     text-decoration: none;
-<<<<<<< Updated upstream
-    color: var(--secondary-color);
-=======
     color: var(--link-color);
     transition: all 0.3s ease;
 }
@@ -62,7 +44,6 @@ a {
 a:hover {
     color: var(--link-hover);
     text-shadow: var(--text-glow);
->>>>>>> Stashed changes
 }
 
 ul {
@@ -75,20 +56,6 @@ ul {
     padding: 0 20px;
 }
 
-<<<<<<< Updated upstream
-/* Header */
-header {
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 3rem 0;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    background-image: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    min-height: 35vh;
-    display: flex;
-    align-items: center;
-=======
 /* Scanlines effect - subtle */
 .scanlines {
     position: fixed;
@@ -179,7 +146,6 @@ header {
     height: 250px;
     display: flex;
     flex-direction: column;
->>>>>>> Stashed changes
     justify-content: center;
 }
 
@@ -193,12 +159,6 @@ header h1 {
 
 header .subtitle {
     font-size: 1.5rem;
-<<<<<<< Updated upstream
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-=======
     animation: typing 3.5s steps(40, end);
     text-shadow: var(--text-glow);
 }
@@ -243,20 +203,14 @@ header .subtitle {
     100% {
         bottom: 0%;
     }
->>>>>>> Stashed changes
 }
 
 /* Navigation */
 nav {
-<<<<<<< Updated upstream
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-=======
     background-color: rgba(255, 255, 255, 0.9);
     border-top: 2px solid var(--border-color);
     border-bottom: 2px solid var(--border-color);
     padding: 0.5rem 0;
->>>>>>> Stashed changes
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -272,13 +226,6 @@ nav ul li {
 }
 
 nav ul li a {
-<<<<<<< Updated upstream
-    display: block;
-    padding: 1rem;
-    color: var(--primary-color);
-    font-weight: 600;
-    transition: var(--transition);
-=======
     font-family: 'Press Start 2P', cursive;
     font-size: 0.8rem;
     padding: 0.5rem 0.8rem;
@@ -322,7 +269,6 @@ nav ul li a.active::after {
     border: 1px solid var(--border-color);
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
->>>>>>> Stashed changes
     position: relative;
 }
 
@@ -333,15 +279,10 @@ nav ul li a:after {
     height: 3px;
     bottom: 0;
     left: 0;
-<<<<<<< Updated upstream
-    background-color: var(--secondary-color);
-    transition: var(--transition);
-=======
     width: 100%;
     height: 3px;
     background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
     z-index: 1;
->>>>>>> Stashed changes
 }
 
 nav ul li a:hover {
@@ -367,24 +308,6 @@ nav ul li a:hover:after {
     margin-bottom: 3rem;
     color: var(--primary-color);
     position: relative;
-<<<<<<< Updated upstream
-    padding-bottom: 1rem;
-}
-
-.section h2:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background-color: var(--secondary-color);
-}
-
-/* About Section */
-.about-content {
-=======
     color: var(--heading-color);
     letter-spacing: 3px;
     text-shadow: var(--text-glow);
@@ -392,7 +315,6 @@ nav ul li a:hover:after {
 
 /* Home page styles */
 .home-content {
->>>>>>> Stashed changes
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -406,16 +328,6 @@ nav ul li a:hover:after {
     line-height: 1.8;
 }
 
-<<<<<<< Updated upstream
-/* Experience Section */
-.job {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-=======
 .profile-pic-placeholder {
     width: 100%;
     padding-bottom: 100%;
@@ -427,7 +339,6 @@ nav ul li a:hover:after {
     align-items: center;
     justify-content: center;
     background-color: var(--terminal-bg);
->>>>>>> Stashed changes
 }
 
 .job:hover {
@@ -438,23 +349,7 @@ nav ul li a:hover:after {
 .job h3 {
     color: var(--secondary-color);
     font-size: 1.5rem;
-<<<<<<< Updated upstream
-    margin-bottom: 0.5rem;
-}
-
-.job-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.company {
-    font-weight: 600;
-    color: var(--primary-color);
-=======
     color: var(--text-color);
->>>>>>> Stashed changes
 }
 
 .period {
@@ -462,187 +357,6 @@ nav ul li a:hover:after {
     font-style: italic;
 }
 
-<<<<<<< Updated upstream
-.job-desc li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.job-desc li:before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-}
-
-/* Skills Section */
-.skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.skill-category {
-    flex: 1;
-    min-width: 200px;
-    max-width: 300px;
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.skill-category:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.skill-category h3 {
-    color: var(--secondary-color);
-    margin-bottom: 1rem;
-    text-align: center;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--secondary-color);
-}
-
-.skill-category ul li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.skill-category ul li:before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-    font-size: 1.2rem;
-}
-
-/* Education Section */
-.education {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.education:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.education h3 {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.degree {
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-}
-
-.graduation {
-    color: #777;
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.education ul li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.education ul li:before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-}
-
-/* Research Section */
-.research {
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.research:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.research h3 {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.research-info {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.lab {
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.research ul li {
-    margin-bottom: 0.5rem;
-    position: relative;
-    padding-left: 1.5rem;
-}
-
-.research ul li:before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--secondary-color);
-}
-
-/* Contact Section */
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.contact-item {
-    flex: 1;
-    min-width: 200px;
-    background-color: #f9f9f9;
-    padding: 1.5rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-}
-
-.contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.contact-item .icon {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    display: block;
-=======
 .typewriter {
     overflow: hidden;
     border-right: .15em solid var(--text-color);
@@ -654,17 +368,10 @@ nav ul li a:hover:after {
 .blinking-list li {
     margin-bottom: 10px;
     position: relative;
->>>>>>> Stashed changes
 }
 
 /* Footer */
 footer {
-<<<<<<< Updated upstream
-    background-color: var(--primary-color);
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-=======
     margin-top: 3rem;
     padding: 1.5rem 0;
     border-top: 1px solid var(--border-color);
@@ -979,7 +686,6 @@ footer {
     font-size: 2rem;
     margin-bottom: 1rem;
     display: block;
->>>>>>> Stashed changes
 }
 
 /* Media Queries */

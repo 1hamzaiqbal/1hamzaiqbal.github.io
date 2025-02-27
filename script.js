@@ -1,13 +1,7 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< Updated upstream
-    // Add active class to navigation based on scroll position
-    const sections = document.querySelectorAll('.section');
-    const navLinks = document.querySelectorAll('nav ul li a');
-=======
     // Terminal typing effect
     const terminalLines = document.querySelectorAll('.typing-text .line');
->>>>>>> Stashed changes
     
     window.addEventListener('scroll', () => {
         let current = '';
@@ -51,16 +45,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
-<<<<<<< Updated upstream
-    // Apply staggered animations
-    animateList('.job-desc li');
-    animateList('.skill-category');
-    animateList('.education ul li');
-    animateList('.research ul li');
-    animateList('.contact-item');
-    
-    // Add CSS class for active navigation links
-=======
     // Apply staggered animations to various elements
     animateList('.projects-grid .project-card', 150);
     animateList('.thoughts-list .thought-item', 150);
@@ -111,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Add CSS for terminal fade out and main content reveal
->>>>>>> Stashed changes
     const style = document.createElement('style');
     style.textContent = `
         nav ul li a.active {
