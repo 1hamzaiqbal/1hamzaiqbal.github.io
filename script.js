@@ -1,8 +1,13 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< Updated upstream
     // Add active class to navigation based on scroll position
     const sections = document.querySelectorAll('.section');
     const navLinks = document.querySelectorAll('nav ul li a');
+=======
+    // Terminal typing effect
+    const terminalLines = document.querySelectorAll('.typing-text .line');
+>>>>>>> Stashed changes
     
     window.addEventListener('scroll', () => {
         let current = '';
@@ -46,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
+<<<<<<< Updated upstream
     // Apply staggered animations
     animateList('.job-desc li');
     animateList('.skill-category');
@@ -54,6 +60,58 @@ document.addEventListener('DOMContentLoaded', () => {
     animateList('.contact-item');
     
     // Add CSS class for active navigation links
+=======
+    // Apply staggered animations to various elements
+    animateList('.projects-grid .project-card', 150);
+    animateList('.thoughts-list .thought-item', 150);
+    animateList('.resume-item', 150);
+    
+    // Terminal key press effect
+    const terminal = document.querySelector('.terminal');
+    if (terminal) {
+        const pressAnyKey = document.querySelector('.typing-text .line:last-child');
+        
+        if (pressAnyKey && pressAnyKey.textContent.includes('PRESS ANY KEY')) {
+            const handleInteraction = () => {
+                terminal.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    const mainContent = document.querySelector('main');
+                    if (mainContent) {
+                        mainContent.style.opacity = '1';
+                        mainContent.style.transform = 'translateY(0)';
+                    }
+                }, 600);
+            };
+            
+            // Allow key press to continue
+            document.addEventListener('keydown', handleInteraction, { once: true });
+            
+            // Also allow click to continue
+            terminal.addEventListener('click', handleInteraction, { once: true });
+        }
+    }
+    
+    // Initialize typewriter effect for elements with the typewriter class
+    const typewriterElements = document.querySelectorAll('.typewriter');
+    typewriterElements.forEach(element => {
+        const text = element.textContent;
+        element.textContent = '';
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        
+        typeWriter();
+    });
+
+    // Add CSS for terminal fade out and main content reveal
+>>>>>>> Stashed changes
     const style = document.createElement('style');
     style.textContent = `
         nav ul li a.active {

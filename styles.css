@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+<<<<<<< Updated upstream
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
@@ -8,6 +9,21 @@
     --text-color: #333;
     --container-width: 1200px;
     --transition: all 0.3s ease-in-out;
+=======
+    --primary-color: #1e1e1e;
+    --secondary-color: #3a86ff;
+    --accent-color: #ff006e;
+    --background: #ffffff;
+    --terminal-bg: #f5f5f5;
+    --terminal-header: #e0e0e0;
+    --text-color: #121212;
+    --heading-color: #000000;
+    --link-color: #3a86ff;
+    --link-hover: #ff006e;
+    --scanline-color: rgba(0, 0, 0, 0.03);
+    --text-glow: 0 0 2px rgba(0, 0, 0, 0.5);
+    --border-color: #1e1e1e;
+>>>>>>> Stashed changes
 }
 
 /* Reset & Base Styles */
@@ -22,7 +38,13 @@ html {
 }
 
 body {
+<<<<<<< Updated upstream
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+=======
+    font-family: 'Space Mono', monospace;
+    background-color: var(--background);
+    color: var(--text-color);
+>>>>>>> Stashed changes
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--light-color);
@@ -30,7 +52,17 @@ body {
 
 a {
     text-decoration: none;
+<<<<<<< Updated upstream
     color: var(--secondary-color);
+=======
+    color: var(--link-color);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-shadow: var(--text-glow);
+>>>>>>> Stashed changes
 }
 
 ul {
@@ -43,6 +75,7 @@ ul {
     padding: 0 20px;
 }
 
+<<<<<<< Updated upstream
 /* Header */
 header {
     background-color: var(--primary-color);
@@ -55,6 +88,98 @@ header {
     min-height: 35vh;
     display: flex;
     align-items: center;
+=======
+/* Scanlines effect - subtle */
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        var(--scanline-color) 51%,
+        transparent 51%
+    );
+    background-size: 100% 4px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0) 0%, rgba(0,0,0,0.02) 90%);
+    pointer-events: none;
+    z-index: 9;
+    opacity: 0.4;
+}
+
+/* Header styles */
+header {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.terminal {
+    background-color: var(--terminal-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.terminal-header {
+    background-color: var(--terminal-header);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 8px;
+    margin-right: 15px;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.close {
+    background-color: #ff5f56;
+}
+
+.minimize {
+    background-color: #ffbd2e;
+}
+
+.maximize {
+    background-color: #27c93f;
+}
+
+.terminal-title {
+    font-family: 'VT323', monospace;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.terminal-content {
+    padding: 2rem;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+>>>>>>> Stashed changes
     justify-content: center;
 }
 
@@ -68,16 +193,70 @@ header h1 {
 
 header .subtitle {
     font-size: 1.5rem;
+<<<<<<< Updated upstream
     font-weight: 300;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 3px;
+=======
+    animation: typing 3.5s steps(40, end);
+    text-shadow: var(--text-glow);
+}
+
+.typing-text .line:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.typing-text .line:nth-child(3) {
+    animation-delay: 3s;
+    animation: typing 3.5s steps(40, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.scanline {
+    width: 100%;
+    height: 100px;
+    z-index: 8;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.05) 10%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    position: absolute;
+    bottom: 100%;
+    animation: scanline 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes scanline {
+    0% {
+        bottom: 100%;
+    }
+    80% {
+        bottom: 100%;
+    }
+    100% {
+        bottom: 0%;
+    }
+>>>>>>> Stashed changes
 }
 
 /* Navigation */
 nav {
+<<<<<<< Updated upstream
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+=======
+    background-color: rgba(255, 255, 255, 0.9);
+    border-top: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--border-color);
+    padding: 0.5rem 0;
+>>>>>>> Stashed changes
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -93,11 +272,57 @@ nav ul li {
 }
 
 nav ul li a {
+<<<<<<< Updated upstream
     display: block;
     padding: 1rem;
     color: var(--primary-color);
     font-weight: 600;
     transition: var(--transition);
+=======
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    display: inline-block;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--link-hover);
+    text-shadow: var(--text-glow);
+}
+
+nav ul li a::before {
+    content: '[';
+    margin-right: 5px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+    content: ']';
+    margin-left: 5px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after,
+nav ul li a.active::before,
+nav ul li a.active::after {
+    opacity: 1;
+}
+
+/* Content Section */
+.content-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+>>>>>>> Stashed changes
     position: relative;
 }
 
@@ -108,8 +333,15 @@ nav ul li a:after {
     height: 3px;
     bottom: 0;
     left: 0;
+<<<<<<< Updated upstream
     background-color: var(--secondary-color);
     transition: var(--transition);
+=======
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+    z-index: 1;
+>>>>>>> Stashed changes
 }
 
 nav ul li a:hover {
@@ -135,6 +367,7 @@ nav ul li a:hover:after {
     margin-bottom: 3rem;
     color: var(--primary-color);
     position: relative;
+<<<<<<< Updated upstream
     padding-bottom: 1rem;
 }
 
@@ -151,6 +384,15 @@ nav ul li a:hover:after {
 
 /* About Section */
 .about-content {
+=======
+    color: var(--heading-color);
+    letter-spacing: 3px;
+    text-shadow: var(--text-glow);
+}
+
+/* Home page styles */
+.home-content {
+>>>>>>> Stashed changes
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -164,6 +406,7 @@ nav ul li a:hover:after {
     line-height: 1.8;
 }
 
+<<<<<<< Updated upstream
 /* Experience Section */
 .job {
     margin-bottom: 3rem;
@@ -172,6 +415,19 @@ nav ul li a:hover:after {
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+=======
+.profile-pic-placeholder {
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--terminal-bg);
+>>>>>>> Stashed changes
 }
 
 .job:hover {
@@ -182,6 +438,7 @@ nav ul li a:hover:after {
 .job h3 {
     color: var(--secondary-color);
     font-size: 1.5rem;
+<<<<<<< Updated upstream
     margin-bottom: 0.5rem;
 }
 
@@ -195,6 +452,9 @@ nav ul li a:hover:after {
 .company {
     font-weight: 600;
     color: var(--primary-color);
+=======
+    color: var(--text-color);
+>>>>>>> Stashed changes
 }
 
 .period {
@@ -202,6 +462,7 @@ nav ul li a:hover:after {
     font-style: italic;
 }
 
+<<<<<<< Updated upstream
 .job-desc li {
     margin-bottom: 0.5rem;
     position: relative;
@@ -381,14 +642,344 @@ nav ul li a:hover:after {
     font-size: 2rem;
     margin-bottom: 1rem;
     display: block;
+=======
+.typewriter {
+    overflow: hidden;
+    border-right: .15em solid var(--text-color);
+    white-space: nowrap;
+    letter-spacing: .1em;
+    animation: typing 3.5s steps(40, end);
+}
+
+.blinking-list li {
+    margin-bottom: 10px;
+    position: relative;
+>>>>>>> Stashed changes
 }
 
 /* Footer */
 footer {
+<<<<<<< Updated upstream
     background-color: var(--primary-color);
     color: #fff;
     padding: 2rem 0;
     text-align: center;
+=======
+    margin-top: 3rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* Bio page */
+.bio-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.bio-section {
+    margin-bottom: 1.5rem;
+}
+
+.bio-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+}
+
+/* Resume page */
+.resume-section {
+    margin-bottom: 2rem;
+}
+
+.resume-heading {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.resume-item {
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--border-color);
+}
+
+.resume-item-title {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.resume-item-subtitle {
+    color: var(--accent-color);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item-period {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.resume-item-description {
+    margin-left: 1rem;
+}
+
+.resume-item-description li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.resume-item-description li::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.skill-category {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    background-color: var(--terminal-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skill-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.skill-category ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.skill-category ul li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Projects page */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    background-color: var(--terminal-bg);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, var(--secondary-color), var(--accent-color));
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-title {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+
+.project-description {
+    margin-bottom: 1rem;
+}
+
+.project-link, .thought-link {
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover, .thought-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+/* Thoughts page */
+.thoughts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.thought-item {
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 1.5rem;
+    background-color: var(--terminal-bg);
+    transition: all 0.3s ease;
+}
+
+.thought-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.thought-title {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+}
+
+.thought-date {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+}
+
+.thought-preview {
+    margin-bottom: 1rem;
+}
+
+/* Project and Thought detail pages */
+.detail-header {
+    margin-bottom: 2rem;
+}
+
+.detail-title {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+}
+
+.detail-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.detail-date {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.detail-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.detail-tag {
+    background-color: var(--terminal-bg);
+    border: 1px solid var(--border-color);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.detail-content {
+    line-height: 1.8;
+}
+
+.detail-content p {
+    margin-bottom: 1.5rem;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: var(--terminal-bg);
+}
+
+/* Contact */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-item {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--terminal-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.contact-item .icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: block;
+>>>>>>> Stashed changes
 }
 
 /* Media Queries */
