@@ -5,33 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamza Iqbal | Radar Systems Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Hamza Iqbal</h1>
-            <p class="subtitle">Radar Systems Engineer</p>
-        </div>
-    </header>
-
-    <nav>
-        <div class="container">
+    <div class="retro-container">
+        <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="bio.html">BIO</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="thoughts.html">THOUGHTS</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
 
         <main>
             <section id="home" class="content-section">
                 <div class="glitch-box">
-                    <h2 class="glitch" data-text="HELLO WORLD">HELLO WORLD</h2>
+                    <h2 class="glitch" data-text="HAMZA IQBAL">HAMZA IQBAL</h2>
                 </div>
                 <div class="home-content">
                     <div class="profile-pic-container">
@@ -40,15 +31,23 @@
                         </div>
                     </div>
                     <div class="home-intro">
-                        <p class="typewriter">I'm Hamza Iqbal, a Radar Systems Engineer with a passion for signal processing, data analysis, and problem-solving.</p>
-                        <p>My expertise includes:</p>
-                        <ul class="blinking-list">
-                            <li>> Radar system design and analysis</li>
-                            <li>> Data engineering and visualization</li>
-                            <li>> Machine learning applications</li>
-                            <li>> Research in neuroscience and healthcare</li>
-                        </ul>
-                        <p>Explore my site to learn more about my work, projects, and thoughts.</p>
+                        <h3>RADAR SYSTEMS ENGINEER</h3>
+                        <p>I specialize in radar signal processing, data engineering, and machine learning applications with experience in both automotive and research environments.</p>
+                        
+                        <div class="home-expertise">
+                            <h4>EXPERTISE:</h4>
+                            <ul>
+                                <li>> Radar system design and analysis</li>
+                                <li>> Data engineering and visualization</li>
+                                <li>> Machine learning applications</li>
+                                <li>> Research in neuroscience and healthcare</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="home-links">
+                            <a href="projects.html" class="home-button">VIEW PROJECTS</a>
+                            <a href="resume.html" class="home-button">VIEW RESUME</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -62,191 +61,10 @@
                     <a href="https://linkedin.com/in/1hamzaiqbal" target="_blank">LINKEDIN</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Work Experience</h2>
-            
-            <div class="job">
-                <h3>Radar Systems Engineer</h3>
-                <div class="job-info">
-                    <span class="company">Uhnder Inc., Automotive radar and chip design startup</span>
-                    <span class="period">January 2022 - February 2025</span>
-                </div>
-                <ul class="job-desc">
-                    <li>Created tools to analyze aspects of Uhnder's Radar Signal Processing Pipeline</li>
-                    <li>Built CLI applications for company-wide bench tests</li>
-                    <li>Modeled link budget of URA/ULA and sparse array sensor configurations</li>
-                    <li>Visualized 2D and 3D coverage maps given various environmental factors</li>
-                    <li>Created pipelines for automated sensor performance</li>
-                    <li>Tested and characterized prototype modules and experimental calibration methods</li>
-                    <li>Employed AGILE methodology to meet requirements</li>
-                </ul>
-            </div>
-
-            <div class="job">
-                <h3>Data Engineer</h3>
-                <div class="job-info">
-                    <span class="company">Dr. Stark Occupational Therapy Lab, Washington University in St. Louis</span>
-                    <span class="period">January 2021 - January 2022</span>
-                </div>
-                <ul class="job-desc">
-                    <li>Managed structure and organization of incoming data for the PEPL Lab</li>
-                    <li>Utilized RedCap, MATLAB, Python, and SPSS for data reformatting and analysis</li>
-                    <li>Performed time-series data analysis to investigate effective interventions</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <ul>
-                        <li>MongoDB</li>
-                        <li>PostgreSQL</li>
-                        <li>MariaDB</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>Python</li>
-                        <li>Java</li>
-                        <li>MATLAB</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
-                    <ul>
-                        <li>SQLAlchemy</li>
-                        <li>Apache Spark</li>
-                        <li>REST API</li>
-                        <li>Git versioning</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Visualization</h3>
-                    <ul>
-                        <li>Apache Superset</li>
-                        <li>Plotly</li>
-                        <li>Matplotlib</li>
-                        <li>Jupyter Notebook</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="education" class="section">
-        <div class="container">
-            <h2>Education</h2>
-            
-            <div class="education">
-                <h3>University of Texas-Austin</h3>
-                <p class="degree">Post Graduate Program in AI & ML: Business Applications (McCombs School of Business)</p>
-                <p class="graduation">Graduated November 2024</p>
-                <ul>
-                    <li>Developed strong foundations in statistical learning and classical machine learning algorithms</li>
-                    <li>Learned AI and deep learning techniques, including neural networks and NLP</li>
-                    <li>Completed end-to-end projects from model deployment to recommendation systems</li>
-                </ul>
-            </div>
-
-            <div class="education">
-                <h3>University of Missouri-Columbia</h3>
-                <p class="degree">Bachelor of Science in Mathematics</p>
-                <p class="graduation">Graduated December 2020 | GPA: 3.86</p>
-                <p>Relevant Coursework: Probability Theory, Statistical Inference, Algorithm Design II, Numerical Linear Algebra, Financial Derivatives, Machine Learning</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="research" class="section">
-        <div class="container">
-            <h2>Research Experience</h2>
-            
-            <div class="research">
-                <h3>Research Fellow</h3>
-                <div class="research-info">
-                    <span class="lab">Dr. Ozden Behavioral Neuroscience Research Lab, University of Missouri</span>
-                    <span class="period">May 2019 - May 2021</span>
-                </div>
-                <ul>
-                    <li>Created open source 'control center' for conducting behavioral neuroscience experiments</li>
-                    <li>Programmed system in Python & C while using low-cost Arduino microcontroller</li>
-                    <li>Designed and manufactured PCB for necessary custom circuitry</li>
-                    <li>Implemented software and hardware optimizations with 87.5% lower latency</li>
-                    <li>Presented project at two national scientific meetings</li>
-                </ul>
-            </div>
-
-            <div class="research">
-                <h3>Research Assistant</h3>
-                <div class="research-info">
-                    <span class="lab">Dr. Milescu Computational Neuroscience Research Lab, University of Missouri</span>
-                    <span class="period">August 2017 - April 2019</span>
-                </div>
-                <ul>
-                    <li>Fixed bugs and added features to Delphi-based ion-channel simulation program QuB</li>
-                    <li>Utilized 2-photon imaging to run electrophysiology experiments</li>
-                    <li>Maintained and migrated Milescu Lab official website</li>
-                </ul>
-            </div>
-
-            <div class="research">
-                <h3>Research Assistant</h3>
-                <div class="research-info">
-                    <span class="lab">Dr. Stark Occupational Therapy Lab, Washington University</span>
-                    <span class="period">May 2016 - August 2016</span>
-                </div>
-                <ul>
-                    <li>Analyzed trends in Alzheimer's study patient retention using IBM SPSS software</li>
-                    <li>Cleaned and corrected a 5000+ patient dataset</li>
-                    <li>Conducted hypothesis testing, ANOVA, and Chi-Squared testing</li>
-                    <li>Results presented at the IAGG 2017 World Conference</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span class="icon">📍</span>
-                    <p>4505 Duval St. Austin, TX 78751</p>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">📱</span>
-                    <p>(636) 634-0885</p>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">✉️</span>
-                    <p>1hamzaiqbal@gmail.com</p>
-                </div>
-                <div class="contact-item">
-                    <span class="icon">💼</span>
-                    <p><a href="https://linkedin.com/in/1hamzaiqbal" target="_blank">linkedin.com/in/1hamzaiqbal</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Hamza Iqbal. All rights reserved.</p>
-        </div>
-    </footer>
-
+        </footer>
+    </div>
+    <div class="overlay"></div>
+    <div class="scanlines"></div>
     <script src="script.js"></script>
 </body>
 </html>

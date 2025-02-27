@@ -31,8 +31,8 @@ body {
     background-color: var(--background);
     color: var(--text-color);
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--light-color);
+    overflow-x: hidden;
+    position: relative;
 }
 
 a {
@@ -50,10 +50,12 @@ ul {
     list-style: none;
 }
 
-.container {
-    max-width: var(--container-width);
+.retro-container {
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
 }
 
 /* Scanlines effect - subtle */
@@ -149,15 +151,12 @@ header {
     justify-content: center;
 }
 
-header h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    letter-spacing: 1px;
-}
-
-header .subtitle {
+.typing-text .line {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 0.5rem;
+    font-family: 'VT323', monospace;
     font-size: 1.5rem;
     animation: typing 3.5s steps(40, end);
     text-shadow: var(--text-glow);
@@ -213,16 +212,19 @@ nav {
     padding: 0.5rem 0;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
+    backdrop-filter: blur(5px);
 }
 
 nav ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
     margin: 0 1rem;
+    position: relative;
 }
 
 nav ul li a {
@@ -232,6 +234,7 @@ nav ul li a {
     display: inline-block;
     color: var(--text-color);
     transition: all 0.3s ease;
+    position: relative;
 }
 
 nav ul li a:hover,
@@ -240,25 +243,21 @@ nav ul li a.active {
     text-shadow: var(--text-glow);
 }
 
-nav ul li a::before {
-    content: '[';
-    margin-right: 5px;
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
+/* Remove brackets effect */
 nav ul li a::after {
-    content: ']';
-    margin-left: 5px;
-    opacity: 0;
-    transition: all 0.3s ease;
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--link-hover);
+    transition: width 0.3s ease;
 }
 
-nav ul li a:hover::before,
 nav ul li a:hover::after,
-nav ul li a.active::before,
 nav ul li a.active::after {
-    opacity: 1;
+    width: 100%;
 }
 
 /* Content Section */
@@ -270,14 +269,13 @@ nav ul li a.active::after {
     border-radius: 4px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     position: relative;
+    overflow: hidden;
 }
 
-nav ul li a:after {
+.content-section::before {
     content: '';
     position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 3px;
@@ -285,28 +283,16 @@ nav ul li a:after {
     z-index: 1;
 }
 
-nav ul li a:hover {
-    color: var(--secondary-color);
-}
-
-nav ul li a:hover:after {
-    width: 100%;
-}
-
-/* Sections */
-.section {
-    padding: 5rem 0;
-}
-
-.section:nth-child(odd) {
-    background-color: #fff;
-}
-
-.section h2 {
+.glitch-box {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.glitch {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
     position: relative;
     color: var(--heading-color);
     letter-spacing: 3px;
@@ -317,15 +303,15 @@ nav ul li a:hover:after {
 .home-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.about-text {
+.profile-pic-container {
     flex: 1;
     min-width: 300px;
-    font-size: 1.2rem;
-    line-height: 1.8;
+    max-width: 350px;
 }
 
 .profile-pic-placeholder {
@@ -341,20 +327,37 @@ nav ul li a:hover:after {
     background-color: var(--terminal-bg);
 }
 
-.job:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.job h3 {
-    color: var(--secondary-color);
+.profile-pic-placeholder span {
+    position: absolute;
+    font-family: 'VT323', monospace;
     font-size: 1.5rem;
     color: var(--text-color);
 }
 
-.period {
-    color: #777;
-    font-style: italic;
+.home-intro {
+    flex: 2;
+    min-width: 300px;
+}
+
+.home-intro h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+.home-intro h4 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    margin: 1.5rem 0 0.8rem 0;
+}
+
+.home-expertise ul {
+    margin-left: 1rem;
+}
+
+.home-expertise li {
+    margin-bottom: 0.5rem;
 }
 
 .typewriter {
@@ -365,9 +368,30 @@ nav ul li a:hover:after {
     animation: typing 3.5s steps(40, end);
 }
 
-.blinking-list li {
-    margin-bottom: 10px;
-    position: relative;
+.home-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.home-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--terminal-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -690,48 +714,42 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
+    .terminal-content {
+        height: 200px;
+    }
+    
+    .typing-text .line {
+        font-size: 1.2rem;
     }
     
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     
     nav ul li {
-        margin: 0.3rem 0;
+        margin: 0.3rem 0.5rem;
     }
     
-    .job-info, .research-info {
+    nav ul li a {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+    }
+    
+    .glitch {
+        font-size: 1.5rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
         flex-direction: column;
+        text-align: center;
     }
     
-    .period {
-        margin-top: 0.5rem;
+    .footer-links {
+        justify-content: center;
     }
-    
-    .section {
-        padding: 3rem 0;
-    }
-}
-
-/* Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.section {
-    animation: fadeIn 1s ease-out;
-}
-
-.job, .education, .research, .skill-category, .contact-item {
-    animation: fadeIn 1s ease-out;
 }
