@@ -1,44 +1,56 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    // Add active class to navigation based on scroll position
-    const sections = document.querySelectorAll('.section');
+    // Terminal typing effect and blinking cursor
+    const terminalLines = document.querySelectorAll('.typing-text .line');
+    
+    if (terminalLines.length > 0) {
+        // Hide all lines initially except the first one
+        terminalLines.forEach((line, index) => {
+            if (index > 0) {
+                line.style.opacity = '0';
+            }
+        });
+        
+        // Reveal lines sequentially
+        let currentLine = 0;
+        
+        const revealNextLine = () => {
+            if (currentLine < terminalLines.length - 1) {
+                currentLine++;
+                terminalLines[currentLine].style.opacity = '1';
+                setTimeout(revealNextLine, 2000);
+            }
+        };
+        
+        setTimeout(revealNextLine, 2000);
+    }
+    
+    // Scanline animation
+    const scanline = document.querySelector('.scanline');
+    if (scanline) {
+        setInterval(() => {
+            scanline.style.top = '0';
+            scanline.style.animation = 'none';
+            setTimeout(() => {
+                scanline.style.animation = 'scanline 8s linear infinite';
+            }, 100);
+        }, 8000);
+    }
+    
+    // Add active class to current page in navigation
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav ul li a');
     
-    window.addEventListener('scroll', () => {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if(scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if(link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
-    
-    // Smooth scrolling for navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
-        });
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
     });
     
-    // Add staggered animation to list items
+    // Apply staggered animations to list items
     const animateList = (selector, delay = 100) => {
         const items = document.querySelectorAll(selector);
         items.forEach((item, index) => {
@@ -46,22 +58,76 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     
-    // Apply staggered animations
-    animateList('.job-desc li');
-    animateList('.skill-category');
-    animateList('.education ul li');
-    animateList('.research ul li');
-    animateList('.contact-item');
+    // Apply staggered animations to various elements
+    animateList('.blinking-list li', 200);
+    animateList('.projects-grid .project-card', 150);
+    animateList('.thoughts-list .thought-item', 150);
+    animateList('.resume-item', 150);
     
-    // Add CSS class for active navigation links
-    const style = document.createElement('style');
-    style.textContent = `
-        nav ul li a.active {
-            color: var(--secondary-color);
+    // Terminal key press effect
+    const terminal = document.querySelector('.terminal');
+    if (terminal) {
+        const pressAnyKey = document.querySelector('.typing-text .line:last-child');
+        
+        if (pressAnyKey && pressAnyKey.textContent.includes('PRESS ANY KEY')) {
+            document.addEventListener('keydown', function() {
+                terminal.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    const mainContent = document.querySelector('main');
+                    if (mainContent) {
+                        mainContent.style.opacity = '1';
+                        mainContent.style.transform = 'translateY(0)';
+                    }
+                }, 600);
+            }, { once: true });
+            
+            // Also allow click to continue
+            terminal.addEventListener('click', function() {
+                terminal.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    const mainContent = document.querySelector('main');
+                    if (mainContent) {
+                        mainContent.style.opacity = '1';
+                        mainContent.style.transform = 'translateY(0)';
+                    }
+                }, 600);
+            }, { once: true });
+        }
+    }
+    
+    // Initialize typewriter effect for elements with the typewriter class
+    const typewriterElements = document.querySelectorAll('.typewriter');
+    typewriterElements.forEach(element => {
+        const text = element.textContent;
+        element.textContent = '';
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
         }
         
-        nav ul li a.active:after {
-            width: 100%;
+        typeWriter();
+    });
+
+    // Add CSS for terminal fade out and main content reveal
+    const style = document.createElement('style');
+    style.textContent = `
+        .terminal.fade-out {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        main {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out 0.3s, transform 0.8s ease-out 0.3s;
         }
     `;
     document.head.appendChild(style);
