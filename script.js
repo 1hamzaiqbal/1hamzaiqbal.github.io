@@ -7,6 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const sections = document.querySelectorAll('.content-section');
     const navLinks = document.querySelectorAll('nav ul li a');
     
+    // Initialize theme toggle
+    initThemeToggle();
+    
+    // Create starry background for dark mode
+    createStarryBackground();
+    
     window.addEventListener('scroll', () => {
         let current = '';
         
@@ -121,4 +127,80 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     `;
     document.head.appendChild(style);
+    
+    // Function to initialize theme toggle
+    function initThemeToggle() {
+        // Get the toggle element
+        const toggle = document.getElementById('theme-toggle');
+        
+        if (!toggle) {
+            console.error('Theme toggle not found in the DOM');
+            return;
+        }
+        
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            toggle.textContent = 'LIGHT MODE';
+        }
+        
+        // Add event listener
+        toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Toggle clicked!');
+            
+            // Toggle dark mode class on root element
+            document.documentElement.classList.toggle('dark-mode');
+            
+            // Update toggle text
+            if (document.documentElement.classList.contains('dark-mode')) {
+                this.textContent = 'LIGHT MODE';
+            } else {
+                this.textContent = 'DARK MODE';
+            }
+            
+            // Save theme preference
+            const currentTheme = document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('theme', currentTheme);
+            
+            console.log('Dark mode:', document.documentElement.classList.contains('dark-mode'));
+        });
+    }
+    
+    // Function to create starry background
+    function createStarryBackground() {
+        // Create stars container
+        const starsContainer = document.createElement('div');
+        starsContainer.className = 'stars';
+        
+        // Create stars
+        const numberOfStars = 100;
+        
+        for (let i = 0; i < numberOfStars; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            
+            // Random size between 1 and 3 pixels
+            const size = Math.random() * 2 + 1;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            
+            // Random position
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            star.style.left = `${x}%`;
+            star.style.top = `${y}%`;
+            
+            // Random animation delay
+            const delay = Math.random() * 4;
+            star.style.animationDelay = `${delay}s`;
+            
+            // Add star to container
+            starsContainer.appendChild(star);
+        }
+        
+        // Add stars container to body
+        document.body.appendChild(starsContainer);
+    }
 });
