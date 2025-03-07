@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
             document.documentElement.classList.add('dark-mode');
-            toggle.textContent = 'LIGHT MODE';
+            toggle.textContent = '☀️';
         }
         
         // Add event listener
@@ -153,11 +153,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Toggle dark mode class on root element
             document.documentElement.classList.toggle('dark-mode');
             
-            // Update toggle text
+            // Update toggle icon
             if (document.documentElement.classList.contains('dark-mode')) {
-                this.textContent = 'LIGHT MODE';
+                this.textContent = '☀️';
             } else {
-                this.textContent = 'DARK MODE';
+                this.textContent = '🌙';
             }
             
             // Save theme preference
