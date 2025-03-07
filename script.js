@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Terminal typing effect
     const terminalLines = document.querySelectorAll('.typing-text .line');
     
+    // Define the sections and navLinks variables
+    const sections = document.querySelectorAll('.content-section');
+    const navLinks = document.querySelectorAll('nav ul li a');
+    
     window.addEventListener('scroll', () => {
         let current = '';
         
@@ -16,7 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         navLinks.forEach(link => {
             link.classList.remove('active');
-            if(link.getAttribute('href').substring(1) === current) {
+            const href = link.getAttribute('href');
+            // Check if href contains a hash
+            if(href.includes('#') && href.substring(href.indexOf('#') + 1) === current) {
+                link.classList.add('active');
+            } else if(href.split('.')[0] === current) {
+                // For links like "index.html", "bio.html", etc.
                 link.classList.add('active');
             }
         });
@@ -24,17 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Smooth scrolling for navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
+        const href = link.getAttribute('href');
+        // Only add smooth scrolling for hash links (within the same page)
+        if(href.includes('#')) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                
+                if(targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
             });
-        });
+        }
     });
     
     // Add staggered animation to list items
