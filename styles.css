@@ -5,7 +5,8 @@
    ========================================================================== */
 
 :root {
-  --font-display: 'Silkscreen', 'Press Start 2P', ui-monospace, monospace;
+  --font-display: 'Silkscreen', 'Press Start 2P', ui-monospace, monospace;   /* tiny labels only */
+  --font-head: 'Space Grotesk', 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
   --font-body: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --max: 1040px;
   --gutter: 16px;
@@ -154,16 +155,16 @@ html[data-theme="light"] .icon-moon { display: none; }
   clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%);
 }
 h1 {
-  font-family: var(--font-display); font-weight: 700;
-  font-size: clamp(28px, 5.4vw, 46px); line-height: 1.12; letter-spacing: .01em;
+  font-family: var(--font-head); font-weight: 700;
+  font-size: clamp(36px, 6vw, 58px); line-height: 1.06; letter-spacing: -.02em;
   color: var(--heading); margin: 0 0 14px;
-  text-shadow: 0 0 22px var(--accent-soft);
+  text-shadow: 0 0 28px var(--accent-soft);
 }
 h2 {
-  font-family: var(--font-display); font-weight: 400; font-size: 15px; letter-spacing: .12em;
+  font-family: var(--font-head); font-weight: 600; font-size: 15px; letter-spacing: .16em;
   text-transform: uppercase; color: var(--heading); margin: 0;
 }
-h2 .num { color: var(--muted); margin-right: 10px; font-weight: 400; }
+h2 .num { font-family: var(--font-display); font-weight: 400; font-size: 11px; color: var(--muted); margin-right: 10px; }
 h3 { font: 600 17px/1.4 var(--font-body); color: var(--heading); margin: 0 0 8px; }
 .lede { font-size: 17px; max-width: 60ch; }
 .muted { color: var(--muted); }
@@ -310,7 +311,7 @@ code { font-family: var(--font-body); font-size: .92em; background: var(--accent
 
 /* ---------- article ---------- */
 .article { max-width: 72ch; }
-.article h1 { font-size: clamp(22px, 4vw, 32px); }
+.article h1 { font-size: clamp(28px, 4.6vw, 40px); letter-spacing: -.015em; }
 .article h3 { margin-top: 30px; font-size: 18px; }
 .article p, .article li { font-size: 16px; }
 .article ul.bullets { margin: 0 0 1em; }
