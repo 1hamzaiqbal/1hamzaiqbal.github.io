@@ -1,235 +1,270 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume | Hamza Iqbal</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV · Hamza Iqbal</title>
+  <meta name="description" content="Curriculum vitae of Hamza Iqbal: research associate at WashU MVRL, chief scientist at 1088 Advisors, former radar systems engineer at Uhnder.">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');document.documentElement.classList.add('js');})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Silkscreen:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%23070a17'/%3E%3Cpath fill='%23f2c76d' d='M7 2h2v4h4v2h-4v4H7V8H3V6h4z'/%3E%3C/svg%3E">
 </head>
-<body>
-    <div class="retro-container">
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="bio.html">BIO</a></li>
-                <li><a href="resume.html" class="active">RESUME</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="thoughts.html">THOUGHTS</a></li>
-                <li>
-                    <a href="#" id="theme-toggle">🌙</a>
-                </li>
-            </ul>
-        </nav>
+<body id="top" data-page="cv">
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="site">
 
-        <main>
-            <section id="resume" class="content-section">
-                <div class="glitch-box">
-                    <h2 class="glitch" data-text="RESUME">RESUME</h2>
-                </div>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="px-star" aria-hidden="true"></span>hamza iqbal</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="research.html" data-nav="research">Research</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="resume.html" data-nav="cv">CV</a>
+      <a href="thoughts.html" data-nav="writing">Writing</a>
+    </nav>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle day and night theme" title="Day / night">
+        <svg class="icon-moon" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 0h3v1H3v1H2v4h1v1h2v1H2V7H1V6H0V2h1V1h1z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M3 0h2v1H3zM0 3h1v2H0zM7 3h1v2H7zM3 7h2v1H3zM2 2h4v4H2zM1 1h1v1H1zM6 1h1v1H6zM1 6h1v1H1zM6 6h1v1H6z"/></svg>
+      </button>
+  </div>
+</header>
 
-                <div class="resume-content">
-                    <!-- Summary -->
-                    <div class="resume-section">
-                        <h3 class="resume-heading">SUMMARY</h3>
-                        <p>Radar Systems Engineer with a BSc in Mathematics and two years of experience in data analysis, modeling, testing, and validation. Proficient in mathematical and signal processing theories with research experience in fields such as signal processing, healthcare, and neuroscience.</p>
-                    </div>
-                    
-                    <!-- Work Experience -->
-                    <div class="resume-section">
-                        <h3 class="resume-heading">WORK_EXPERIENCE</h3>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">RADAR SYSTEMS ENGINEER</div>
-                            <div class="resume-item-subtitle">Uhnder Inc., Automotive radar and chip design startup</div>
-                            <div class="resume-item-period">January 2022 - February 2025</div>
-                            <ul class="resume-item-description">
-                                <li>Created tools to analyze aspects of Uhnder's Radar Signal Processing Pipeline</li>
-                                <li>Built CLI applications for company-wide bench tests</li>
-                                <li>Modeled link budget of URA/ULA and sparse array sensor configurations</li>
-                                <li>Visualized 2D and 3D coverage maps given various environmental factors</li>
-                                <li>Created pipelines for automated sensor performance</li>
-                                <li>Tested and characterized prototype modules and experimental calibration methods</li>
-                                <li>Employed AGILE methodology to meet requirements</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">DATA ENGINEER</div>
-                            <div class="resume-item-subtitle">Dr. Stark Occupational Therapy Lab, Washington University in St. Louis</div>
-                            <div class="resume-item-period">January 2021 - January 2022</div>
-                            <ul class="resume-item-description">
-                                <li>Managed structure and organization of incoming data for the PEPL Lab</li>
-                                <li>Utilized RedCap, MATLAB, Python, and SPSS for data reformatting and analysis</li>
-                                <li>Performed time-series data analysis to investigate effective interventions</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Tools/Tech Stack -->
-                    <div class="resume-section">
-                        <h3 class="resume-heading">TOOLS/TECH_STACK</h3>
-                        
-                        <div class="skills-container">
-                            <div class="skill-category">
-                                <h3>Databases</h3>
-                                <ul>
-                                    <li>MongoDB</li>
-                                    <li>PostgreSQL</li>
-                                    <li>MariaDB</li>
-                                    <li>MySQL</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h3>Languages</h3>
-                                <ul>
-                                    <li>Python</li>
-                                    <li>Java</li>
-                                    <li>MATLAB</li>
-                                    <li>SQL</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h3>Tools</h3>
-                                <ul>
-                                    <li>SQLAlchemy</li>
-                                    <li>Apache Spark</li>
-                                    <li>REST API</li>
-                                    <li>Git versioning</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <h3>Visualization</h3>
-                                <ul>
-                                    <li>Apache Superset</li>
-                                    <li>Plotly</li>
-                                    <li>Matplotlib</li>
-                                    <li>Jupyter Notebook</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Education -->
-                    <div class="resume-section">
-                        <h3 class="resume-heading">EDUCATION</h3>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">University of Texas-Austin</div>
-                            <div class="resume-item-subtitle">Post Graduate Program in AI & ML: Business Applications (McCombs School of Business)</div>
-                            <div class="resume-item-period">Graduated November 2024</div>
-                            <ul class="resume-item-description">
-                                <li>Developed strong foundations in statistical learning and classical machine learning algorithms</li>
-                                <li>Learned AI and deep learning techniques, including neural networks and NLP</li>
-                                <li>Completed end-to-end projects from model deployment to recommendation systems</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">University of Missouri-Columbia</div>
-                            <div class="resume-item-subtitle">Bachelor of Science in Mathematics</div>
-                            <div class="resume-item-period">Graduated December 2020 | GPA: 3.86</div>
-                            <p class="resume-item-description">Relevant Coursework: Probability Theory, Statistical Inference, Algorithm Design II, Numerical Linear Algebra, Financial Derivatives, Machine Learning</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Research Experience -->
-                    <div class="resume-section">
-                        <h3 class="resume-heading">RESEARCH_EXPERIENCE</h3>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">RESEARCH FELLOW</div>
-                            <div class="resume-item-subtitle">Dr. Ozden Behavioral Neuroscience Research Lab, University of Missouri</div>
-                            <div class="resume-item-period">May 2019 - May 2021</div>
-                            <ul class="resume-item-description">
-                                <li>Created open source 'control center' for conducting behavioral neuroscience experiments</li>
-                                <li>Programmed system in Python & C while using low-cost Arduino microcontroller</li>
-                                <li>Designed and manufactured PCB for necessary custom circuitry</li>
-                                <li>Implemented software and hardware optimizations with 87.5% lower latency</li>
-                                <li>Presented project at two national scientific meetings</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">RESEARCH ASSISTANT</div>
-                            <div class="resume-item-subtitle">Dr. Milescu Computational Neuroscience Research Lab, University of Missouri</div>
-                            <div class="resume-item-period">August 2017 - April 2019</div>
-                            <ul class="resume-item-description">
-                                <li>Fixed bugs and added features to Delphi-based ion-channel simulation program QuB</li>
-                                <li>Utilized 2-photon imaging to run electrophysiology experiments</li>
-                                <li>Maintained and migrated Milescu Lab official website</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">RESEARCH ASSISTANT</div>
-                            <div class="resume-item-subtitle">Dr. Stark Occupational Therapy Lab, Washington University</div>
-                            <div class="resume-item-period">May 2016 - August 2016</div>
-                            <ul class="resume-item-description">
-                                <li>Analyzed trends in Alzheimer's study patient retention using IBM SPSS software</li>
-                                <li>Cleaned and corrected a 5000+ patient dataset</li>
-                                <li>Conducted hypothesis testing, ANOVA, and Chi-Squared testing</li>
-                                <li>Results presented at the IAGG 2017 World Conference</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Presentations -->
-                    <div class="resume-section">
-                        <h3 class="resume-heading">PRESENTATIONS</h3>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">Society for Neuroscience Conference (SFN)</div>
-                            <div class="resume-item-period">November 2019</div>
-                            <p class="resume-item-description">Presented poster: "A Low-cost, Open-source Control and Timing System for Training Animals on Behavioral Tasks"</p>
-                        </div>
-                        
-                        <div class="resume-item">
-                            <div class="resume-item-title">Annual Biomedical Research Conference for Minority Students (ABRCMS)</div>
-                            <div class="resume-item-period">October 2019</div>
-                            <p class="resume-item-description">Presented poster: "A Low-cost, Open-source Control and Timing System for Training Animals on Behavioral Tasks"</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Contact -->
-                    <div class="resume-section">
-                        <h3 class="resume-heading">CONTACT</h3>
-                        
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <span class="icon">📍</span>
-                                <p>4505 Duval St. Austin, TX 78751</p>
-                            </div>
-                            <div class="contact-item">
-                                <span class="icon">📱</span>
-                                <p>(636) 634-0885</p>
-                            </div>
-                            <div class="contact-item">
-                                <span class="icon">✉️</span>
-                                <p>1hamzaiqbal@gmail.com</p>
-                            </div>
-                            <div class="contact-item">
-                                <span class="icon">💼</span>
-                                <p><a href="https://linkedin.com/in/1hamzaiqbal" target="_blank">linkedin.com/in/1hamzaiqbal</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <div class="footer-content">
-                <p>&copy; 2025 Hamza Iqbal</p>
-                <div class="footer-links">
-                    <a href="mailto:1hamzaiqbal@gmail.com">EMAIL</a>
-                    <a href="https://linkedin.com/in/1hamzaiqbal" target="_blank">LINKEDIN</a>
-                </div>
-            </div>
-        </footer>
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="cv-head">
+        <div>
+          <p class="eyebrow">Curriculum vitae</p>
+          <h1>Hamza Iqbal</h1>
+          <p class="lede">Research Associate, Multimodal Vision Research Lab, Washington University in St. Louis. Chief Scientist, 1088 Advisors.</p>
+        </div>
+        <div class="links">
+          <a class="pill" href="mailto:1hamzaiqbal@gmail.com">1hamzaiqbal@gmail.com</a>
+          <a class="pill" href="https://github.com/1hamzaiqbal" target="_blank" rel="me noopener">GitHub</a>
+          <a class="pill" href="https://www.linkedin.com/in/1hamzaiqbal" target="_blank" rel="me noopener">LinkedIn</a>
+          <a class="pill" href="https://scholar.google.com/citations?user=mU-xTzAAAAAJ" target="_blank" rel="noopener">Scholar</a>
+          <a class="pill" href="https://orcid.org/0000-0002-3814-9113" target="_blank" rel="me noopener">ORCID</a>
+        </div>
+      </div>
     </div>
-    <div class="overlay"></div>
-    <div class="scanlines"></div>
-    <script src="script.js"></script>
+  </section>
+
+  <section class="section reveal" id="summary">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">01</span>Summary</h2></div>
+      <div class="prose">
+        <p>Computer vision and geospatial machine learning researcher with an engineering background in radar systems and healthcare data. Co-author of Tessellating the Earth (ECCV 2026) and lead author of GeoDIVE, an efficient retrieval method for planet-scale image geolocalization now under review. M.S. in Computer Science from WashU (2026), B.S. in Mathematics from the University of Missouri (2020). Comfortable from the PCB up: firmware, signal processing, data pipelines, distributed training, and the writing that ties it together.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="experience">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">02</span>Experience</h2></div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Research Associate</span> &middot; <span class="tl-org"><a href="https://mvrl.cse.wustl.edu/" target="_blank" rel="noopener">Multimodal Vision Research Lab</a>, Washington University in St. Louis</span></div>
+            <span class="tl-date">Nov 2025 &ndash; present</span>
+          </div>
+          <div class="tl-body">
+            <p>Graduate researcher from November 2025; research associate since completing the M.S. Advisor: Nathan Jacobs.</p>
+            <ul class="bullets">
+              <li>Co-authored <em>Tessellating the Earth</em> (ECCV 2026): a location encoder built from learnable spherical Voronoi partitions with shared global semantic tokens; state of the art across geospatial classification and regression benchmarks.</li>
+              <li>Lead <em>GeoDIVE</em>: best-first descent over a multiresolution gallery organized as a forest, matching exhaustive cosine retrieval recall@10 at roughly 10% of the encoding cost; extends to object-level queries. Submitted to WACV.</li>
+              <li>Train contrastive CLIP-style vision transformers on large-scale multispectral satellite imagery; run distributed experiments on SLURM clusters with PyTorch Lightning; build cross-modal (text-to-image, image-to-image) retrieval pipelines over hierarchical geospatial tiles.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Chief Scientist</span> &middot; <span class="tl-org">1088 Advisors (higher-education strategy consultancy)</span></div>
+            <span class="tl-date">May 2026 &ndash; present</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Lead the data and AI practice; designed and built the analytics platform behind research-strategy diagnostics and innovation scans for research universities.</li>
+              <li>Built collectors and a data lake over NSF HERD, OpenAlex, USPTO, NIH RePORTER and AUTM data; peer benchmarking of research expenditures, output, funding mix and technology transfer.</li>
+              <li>Topic clustering of institutional research portfolios with SPECTER2 embeddings, BERTopic and Leiden community detection; automated LaTeX and PowerPoint report builders.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Systems Engineer</span> &middot; <span class="tl-org">Uhnder, Inc. (digital-code-modulation automotive radar), Austin, TX</span></div>
+            <span class="tl-date">Jan 2022 &ndash; Feb 2025</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Wrote and owned <a href="projects/pyscott.html">PySCOTT</a>, a link-budget and scan-configuration modeling tool (Python, Dash) predicting SNR across range, Doppler and angle from simulated or measured antenna patterns; its curves set production test limits and drove customer coverage maps.</li>
+              <li>Developed automated test and validation pipelines with 2D/3D coverage visualizations for sensor characterization across hardware configurations: turntables, interference simulation, close-range experiments.</li>
+              <li>Modeled link budgets for URA/ULA and sparse-array sensor configurations; built analysis tooling for the radar DSP pipeline to diagnose noise floor, signal magnitude, vector misalignment and phase mismatch.</li>
+              <li>Applied ML to classify false alarms, multipath and interference in real-time object detections; built the CLI used company-wide for bench tests and deployed automated software testing that caught issues during active development.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Data Engineer (contract)</span> &middot; <span class="tl-org">Vitana LLC (healthcare startup), remote</span></div>
+            <span class="tl-date">Feb &ndash; Aug 2023</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Converted HL7v2.x lab results to FHIR and integrated them with PracticeFusion EMR records, storing unified patient data in PostgreSQL and MongoDB for downstream analytics.</li>
+              <li>Built Spark ETL pipelines consolidating lab results, billing and patient records from heterogeneous clinical sources into a queryable data lake, visualized in Apache Superset; worked within HIPAA constraints.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Research Assistant &amp; Data Manager</span> &middot; <span class="tl-org">Stark Lab, Program in Occupational Therapy, WashU School of Medicine</span></div>
+            <span class="tl-date">Jan 2021 &ndash; Jan 2022</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Managed clinical datasets for fall-prevention and Alzheimer&rsquo;s studies with the Knight ADRC; cleaned and structured 5,000+ participant records, including unstructured clinical notes, for cohort selection.</li>
+              <li>Statistical analyses of health-outcome and time-series data (Python, MATLAB, SPSS); data dictionaries and merges across instruments and study arms; REDCap filters and conditionals to prevent recurring data-entry errors.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="education">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">03</span>Education</h2></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">M.S. in Computer Science</span> &middot; <span class="tl-org">Washington University in St. Louis</span></div>
+            <span class="tl-date">Aug 2025 &ndash; May 2026</span>
+          </div>
+          <div class="tl-body">
+            <p class="edu-note">Coursework: Bayesian machine learning, large language models, advanced computer vision, deep reinforcement learning, text mining, data mining, information theory, rapid prototyping.</p>
+            <p class="edu-note">Teaching assistant, CSE 4470: Automata &amp; Theory of Computation (Spring 2026).</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Post Graduate Program in AI &amp; Machine Learning: Business Applications</span> &middot; <span class="tl-org">McCombs School of Business, University of Texas at Austin</span></div>
+            <span class="tl-date">Mar &ndash; Nov 2024</span>
+          </div>
+          <div class="tl-body"><p class="edu-note">Statistical learning and classical ML, neural networks, computer vision, NLP and generative AI, with end-to-end projects in image classification, recommendation systems and model deployment.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">B.S. in Mathematics</span> &middot; <span class="tl-org">University of Missouri, Columbia</span></div>
+            <span class="tl-date">Dec 2020</span>
+          </div>
+          <div class="tl-body"><p class="edu-note">GPA 3.86. Coursework: probability theory, statistical inference, algorithm design, numerical linear algebra, financial derivatives, introduction to machine learning.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="research">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">04</span>Earlier research</h2><a class="aside arrow" href="research.html">full research page</a></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Research Fellow</span> &middot; <span class="tl-org">Ozden Lab, behavioral neuroscience, University of Missouri</span></div>
+            <span class="tl-date">May 2019 &ndash; May 2021</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Built a low-cost, open-source control and timing system for behavioral experiments in Python and C on Arduino, with a custom PCB designed in Eagle: 85% cheaper and 87.5% lower latency than the commercial alternative.</li>
+              <li>Frequency-domain analysis of 3+ TB of mouse EEG toward a non-invasive deep-brain-stimulation approach. IMSD fellow from August 2019.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Research Assistant</span> &middot; <span class="tl-org">Milescu Lab, computational neuroscience, University of Missouri</span></div>
+            <span class="tl-date">Aug 2017 &ndash; Apr 2019</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Fixed bugs and added features to QuB, the lab&rsquo;s Delphi-based ion-channel simulation software; ran electrophysiology experiments with two-photon imaging; trained in patch clamp.</li>
+              <li>Developed a low-cost multispectral imaging system, prototyped lab tools with CAD and 3D printing, and migrated the lab website to Google Cloud.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Summer Research Student (STARS program)</span> &middot; <span class="tl-org">Stark Lab, WashU School of Medicine</span></div>
+            <span class="tl-date">Summer 2016</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Analyzed participant retention in Knight ADRC Alzheimer&rsquo;s studies with SPSS, the Google Maps API and regression on a cleaned 5,000+ participant dataset; pilot results presented at IAGG 2017.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="publications">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">05</span>Publications &amp; presentations</h2></div>
+      <ul class="bullets">
+        <li>Daniel Cher, <strong>Hamza Iqbal</strong>, Eric Xing, Brian Wei, Nathan Jacobs. <em>Tessellating the Earth: Learnable Spherical Voronoi Partitions for Location Encoding.</em> European Conference on Computer Vision (ECCV), 2026. <a href="https://arxiv.org/abs/2606.27514" target="_blank" rel="noopener">arXiv</a> &middot; <a href="https://github.com/mvrl/TTE" target="_blank" rel="noopener">code</a> &middot; <a href="https://eccv.ecva.net/virtual/2026/poster/5452" target="_blank" rel="noopener">ECCV page</a></li>
+        <li><strong>Hamza Iqbal</strong> et al. <em>GeoDIVE: Geospatial Descent Informed by Value Estimation.</em> Under review, 2026.</li>
+        <li><em>A Low-cost, Open-source Control and Timing System for Training Animals on Behavioral Tasks.</em> Posters at SfN 2019 (Chicago) and ABRCMS 2019 (Anaheim).</li>
+        <li>Pilot study of participant retention in Alzheimer&rsquo;s disease research. IAGG 2017 World Congress.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section reveal" id="skills">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">06</span>Skills</h2></div>
+      <div class="skills">
+        <div class="skill"><h3>Languages</h3><p>Python, SQL, C/C++, JavaScript, MATLAB, Java, R, LaTeX</p></div>
+        <div class="skill"><h3>ML &amp; vision</h3><p>PyTorch, PyTorch Lightning, Hugging Face, CLIP and contrastive learning, vision transformers, DINOv2, OpenCV, retrieval and nearest-neighbor search</p></div>
+        <div class="skill"><h3>NLP &amp; agents</h3><p>Sentence and document embeddings (SPECTER2), BERTopic, LangGraph, LangChain, retrieval-augmented generation, evaluation harnesses</p></div>
+        <div class="skill"><h3>Data engineering</h3><p>Apache Spark, pandas, NumPy, SciPy, PostgreSQL, MongoDB, MySQL/MariaDB, Apache Superset, HL7v2, FHIR, REDCap</p></div>
+        <div class="skill"><h3>Infrastructure</h3><p>Linux, SLURM/HPC, Docker, Git, AWS (EC2, S3), GCP, REST APIs, Dash and Plotly</p></div>
+        <div class="skill"><h3>Signal processing &amp; hardware</h3><p>Radar link budgets and DSP diagnostics, spectrum analyzers and signal generators, Arduino and Raspberry Pi, PCB design (Eagle), CAD and 3D printing</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <svg class="horizon" viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true">
+    <path class="far" d="M0 12 V8 H6 V6 H10 V7 H16 V4 H20 V5 H26 V8 H34 V6 H40 V3 H44 V5 H50 V7 H58 V5 H62 V6 H70 V4 H76 V6 H84 V8 H90 V5 H94 V7 H100 V12 Z"/>
+    <path class="near" d="M0 12 V10 H8 V9 H14 V10 H24 V8 H30 V9 H42 V10 H52 V8 H56 V9 H66 V10 H78 V9 H86 V10 H100 V12 Z"/>
+  </svg>
+  <div class="foot">
+    <div class="wrap">
+      <span>&copy; <span data-year>2026</span> Hamza Iqbal &middot; St. Louis, MO</span>
+      <div class="flinks">
+        <a href="mailto:1hamzaiqbal@gmail.com">Email</a>
+        <a href="https://github.com/1hamzaiqbal" target="_blank" rel="me noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/1hamzaiqbal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=mU-xTzAAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://orcid.org/0000-0002-3814-9113" target="_blank" rel="me noopener">ORCID</a>
+      </div>
+      <a class="totop" href="#top">&#9650; top</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script src="script.js"></script>
 </body>
 </html>
