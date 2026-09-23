@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Hamza Iqbal</title>
+  <meta name="description" content="Publications, talks and research experience of Hamza Iqbal: Tessellating the Earth (ECCV 2026), work in progress on efficient image geolocalization, and earlier work in neuroscience and clinical data.">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');document.documentElement.classList.add('js');})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Silkscreen&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%23070a17'/%3E%3Cpath fill='%23f2c76d' d='M7 2h2v4h4v2h-4v4H7V8H3V6h4z'/%3E%3C/svg%3E">
+</head>
+<body id="top" data-page="research">
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="site">
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="px-star" aria-hidden="true"></span>hamza iqbal</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="about.html" data-nav="about">About</a>
+      <a href="research.html" data-nav="research">Research</a>
+      <a href="projects.html" data-nav="projects">Projects</a>
+      <a href="resume.html" data-nav="cv">CV</a>
+      <a href="thoughts.html" data-nav="writing">Writing</a>
+    </nav>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle day and night theme" title="Day / night">
+        <svg class="icon-moon" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 0h3v1H3v1H2v4h1v1h2v1H2V7H1V6H0V2h1V1h1z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M3 0h2v1H3zM0 3h1v2H0zM7 3h1v2H7zM3 7h2v1H3zM2 2h4v4H2zM1 1h1v1H1zM6 1h1v1H6zM1 6h1v1H1zM6 6h1v1H6z"/></svg>
+      </button>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Research</p>
+      <h1>Research</h1>
+      <p class="lede">Geospatial computer vision: how to represent places so networks can learn from them, and how to search the planet without encoding all of it. Earlier work in neuroscience instrumentation, clinical data and automotive radar.</p>
+    </div>
+  </section>
+
+  <section class="section reveal" id="publications">
+    <div class="wrap">
+      <div class="section-head">
+        <h2><span class="num">01</span>Publications</h2>
+        <a class="aside arrow" href="https://scholar.google.com/citations?user=mU-xTzAAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+      </div>
+
+      <article class="pub" id="tte">
+        <div class="venue">ECCV<br>2026</div>
+        <div>
+          <h3>Tessellating the Earth: Learnable Spherical Voronoi Partitions for Location Encoding</h3>
+          <p class="authors">Daniel Cher, <b>Hamza Iqbal</b>, Eric Xing, Brian Wei, Nathan Jacobs</p>
+          <p class="summary">Location encoders turn a latitude&ndash;longitude pair into a learned representation, but most project coordinates onto a fixed basis and spend as much capacity on open ocean as on a growing city. TTE builds the encoder from a learnable spherical Voronoi partition: each site carries its own embedding and migrates during training toward the areas that matter, end to end and fully differentiable. A small vocabulary of shared global semantic tokens, distilled from satellite imagery, lets distant sites with similar environments share meaning. TTE sets a new state of the art across geospatial classification and regression benchmarks and is the strongest geographic prior for fine-grained species classification on iNaturalist-2018.</p>
+          <div class="links">
+            <a class="pill" href="https://arxiv.org/abs/2606.27514" target="_blank" rel="noopener">arXiv</a>
+            <a class="pill" href="https://arxiv.org/pdf/2606.27514" target="_blank" rel="noopener">PDF</a>
+            <a class="pill" href="https://github.com/mvrl/TTE" target="_blank" rel="noopener">Code</a>
+            <a class="pill" href="https://huggingface.co/MVRL/TTE" target="_blank" rel="noopener">Weights</a>
+            <a class="pill" href="https://dcher95.github.io/TTE/" target="_blank" rel="noopener">Project page</a>
+            <a class="pill" href="https://eccv.ecva.net/virtual/2026/poster/5452" target="_blank" rel="noopener">ECCV page</a>
+            <a class="pill" href="https://www.youtube.com/watch?v=YXPyIUUMC_4" target="_blank" rel="noopener">&#9654; Talk</a>
+            <a class="pill" href="https://eccv.ecva.net/media/PosterPDFs/ECCV%202026/5452.png?t=1788109319.3951776" target="_blank" rel="noopener">Poster</a>
+          </div>
+          <a class="thumb" href="https://eccv.ecva.net/media/PosterPDFs/ECCV%202026/5452.png?t=1788109319.3951776" target="_blank" rel="noopener" title="Open the full-resolution poster">
+            <img src="pictures/tte_poster_thumb.jpg" alt="ECCV 2026 poster for Tessellating the Earth" width="720" height="513" loading="lazy">
+          </a>
+        </div>
+      </article>
+
+      <article class="pub" id="geolocalization-retrieval">
+        <div class="venue pending">Under<br>review</div>
+        <div>
+          <h3>Efficient retrieval for planet-scale image geolocalization</h3>
+          <p class="authors"><b>Hamza Iqbal</b> and collaborators at MVRL. Title and author list withheld during double-blind review.</p>
+          <p class="summary">Image geolocalization by retrieval usually means encoding a query against every tile of a planet-scale gallery. This work organizes the gallery hierarchically and learns which regions are worth refining, so most of the gallery is never encoded at all. It matches exhaustive search at a fraction of the encoding cost and extends to object-level queries. Under review; name, code and details after the decision.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section reveal" id="talks">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">02</span>Talks &amp; posters</h2></div>
+      <ul class="bullets">
+        <li><em>A Low-cost, Open-source Control and Timing System for Training Animals on Behavioral Tasks.</em> Poster, Society for Neuroscience annual meeting (SfN 2019), Chicago, IL.</li>
+        <li>The same work as a poster at the Annual Biomedical Research Conference for Minority Students (ABRCMS 2019), Anaheim, CA.</li>
+        <li>Pilot analysis of participant retention in Alzheimer&rsquo;s disease studies (Knight ADRC, Stark Lab). IAGG 2017 World Congress of Gerontology and Geriatrics.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section reveal" id="experience">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">03</span>Research experience</h2></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Research Associate</span> &middot; <span class="tl-org"><a href="https://mvrl.cse.wustl.edu/" target="_blank" rel="noopener">Multimodal Vision Research Lab</a>, Washington University in St. Louis</span></div>
+            <span class="tl-date">Nov 2025 &ndash; present</span>
+          </div>
+          <div class="tl-body">
+            <p>Joined as a graduate researcher in November 2025 and stayed on as a research associate after finishing the M.S. Advisor: Nathan Jacobs.</p>
+            <ul class="bullets">
+              <li>Co-authored Tessellating the Earth (ECCV 2026), a location encoder built from learnable spherical Voronoi partitions.</li>
+              <li>Lead a project on efficient retrieval for planet-scale image geolocalization: hierarchical search over a multiresolution gallery that matches exhaustive retrieval at a fraction of the encoding cost. Paper under review.</li>
+              <li>Train contrastive vision transformers on large-scale satellite imagery and run distributed experiments on SLURM clusters with PyTorch Lightning.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Research Assistant &amp; Data Manager</span> &middot; <span class="tl-org">Stark Lab, Program in Occupational Therapy, WashU School of Medicine</span></div>
+            <span class="tl-date">Jan 2021 &ndash; Jan 2022</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Managed clinical datasets for fall-prevention and Alzheimer&rsquo;s studies with the Knight ADRC; cleaned and structured 5,000+ participant records, including unstructured clinical notes, for cohort selection.</li>
+              <li>Statistical analysis of health-outcome and time-series data in Python, MATLAB and SPSS; built data dictionaries and merged data across instruments and study arms; added REDCap safeguards after finding structural data-entry issues.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Research Fellow</span> &middot; <span class="tl-org">Ozden Lab, behavioral neuroscience, University of Missouri</span></div>
+            <span class="tl-date">May 2019 &ndash; May 2021</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Designed and built a low-cost, open-source control and timing system for behavioral experiments (Python, C, Arduino, custom PCB in Eagle): 85% cheaper and 87.5% lower latency than the commercial alternative.</li>
+              <li>Analyzed 3+ TB of mouse EEG recordings in the frequency domain toward a non-invasive deep-brain-stimulation approach.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Research Assistant</span> &middot; <span class="tl-org">Milescu Lab, computational neuroscience, University of Missouri</span></div>
+            <span class="tl-date">Aug 2017 &ndash; Apr 2019</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Maintained and extended QuB, the lab&rsquo;s Delphi-based ion-channel simulation software; ran electrophysiology experiments with two-photon imaging.</li>
+              <li>Built a low-cost multispectral imaging rig, prototyped lab tools in CAD, and migrated the lab website to Google Cloud.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Summer Research Student (STARS)</span> &middot; <span class="tl-org">Stark Lab, WashU School of Medicine</span></div>
+            <span class="tl-date">May &ndash; Aug 2016</span>
+          </div>
+          <div class="tl-body">
+            <ul class="bullets">
+              <li>Studied retention in Knight ADRC studies: cleaned a 5,000+ participant dataset and tested the link between travel distance and retention with the Google Maps API and regression. Presented at IAGG 2017.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reveal" id="teaching">
+    <div class="wrap">
+      <div class="section-head"><h2><span class="num">04</span>Teaching</h2></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-head">
+            <div><span class="tl-role">Teaching Assistant, CSE 4470: Automata &amp; Theory of Computation</span> &middot; <span class="tl-org">Washington University in St. Louis</span></div>
+            <span class="tl-date">Spring 2026</span>
+          </div>
+          <div class="tl-body"><p>Grading, weekly office hours and student support for the undergraduate theory of computation course (instructor: Jeremy Buhler).</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <svg class="horizon" viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true">
+    <path class="far" d="M0 12 V8 H6 V6 H10 V7 H16 V4 H20 V5 H26 V8 H34 V6 H40 V3 H44 V5 H50 V7 H58 V5 H62 V6 H70 V4 H76 V6 H84 V8 H90 V5 H94 V7 H100 V12 Z"/>
+    <path class="near" d="M0 12 V10 H8 V9 H14 V10 H24 V8 H30 V9 H42 V10 H52 V8 H56 V9 H66 V10 H78 V9 H86 V10 H100 V12 Z"/>
+  </svg>
+  <div class="foot">
+    <div class="wrap">
+      <span>&copy; <span data-year>2026</span> Hamza Iqbal &middot; St. Louis, MO</span>
+      <div class="flinks">
+        <a href="mailto:1hamzaiqbal@gmail.com">Email</a>
+        <a href="https://github.com/1hamzaiqbal" target="_blank" rel="me noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/1hamzaiqbal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=mU-xTzAAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://orcid.org/0000-0002-3814-9113" target="_blank" rel="me noopener">ORCID</a>
+      </div>
+      <a class="totop" href="#top">&#9650; top</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

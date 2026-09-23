@@ -1,71 +1,74 @@
-Resume
+# Hamza Iqbal
 
-HAMZA IQBAL
-4505 Duval St. Austin , TX 78751|(636) 634-0885| 1hamzaiqbal@gmail.com
-linkedin.com/in/1hamzaiqbal
-			         
-SUMMARY
-Radar Systems Engineer with a BSc in Mathematics and two years of experience in data analysis, modeling, testing, and validation. Proficient in mathematical and signal processing theories with research experience in fields such as signal processing, healthcare, and neuroscience.
-WORK EXPERIENCE
-RADAR SYSTEMS ENGINEER                                                                  January 2022 - February 2025
-Uhnder Inc., Automotive radar and chip design startup                                                       
-Tool created to analyze aspects of Uhnder’s Radar Signal Processing Pipeline 
-Looking at noise floor, signal magnitude, vector misalignment, and phase mismatches within DSP processing of real radar data
-Deployed in automated software testing to discover issues with software being developed
-CLI application built for company-wide bench tests
-Modeling link budget of URA/ULA and sparse array sensor configurations 
-Performance and link budget characterization for different sensors, chipsets, and boards
-Visualizing 2D and 3D coverage maps given various environmental factors, (RCS, doppler, range)
-Results used in customer engagements and internal evaluations
-Created pipelines for automated sensor performance (using turntables, simulating interference scenarios, conducting close range experiments)
-Tested and characterized prototype modules and experimental calibration methods
-Utilized spectrum analyzers, signal generators, and radar target simulators to debug and resolve issues
-Employed AGILE methodology to meet functional and time requirements from PMs 
+Research Associate, Multimodal Vision Research Lab, Washington University in St. Louis
+Chief Scientist, 1088 Advisors
 
-DATA ENGINEER                                                                                             January 2021- January 2022
-Dr. Stark Occupational Therapy Lab, Washington University in St. Louis                                                       
-Managed the structure and organization of incoming data for the PEPL Lab.
-Utilized RedCap data collection tool, MATLAB, Python, and SPSS for data reformatting and statistical analysis.
-Data analysis done for time-series data to investigate effective interventions
+1hamzaiqbal@gmail.com · [github.com/1hamzaiqbal](https://github.com/1hamzaiqbal) · [linkedin.com/in/1hamzaiqbal](https://www.linkedin.com/in/1hamzaiqbal) · [Google Scholar](https://scholar.google.com/citations?user=mU-xTzAAAAAJ) · [ORCID 0000-0002-3814-9113](https://orcid.org/0000-0002-3814-9113)
 
-TOOLS/TECH STACK
-Databases: MongoDB, PostgreSQL, MariaDB, MySQL
-Languages: Python, Java, MATLAB, SQL
-Tools: SQLAlchemy, Apache Spark, REST API, git versioning
-Visualization: Apache Superset, Plotly, Matplotlib, Jupyter Notebook 
+## Summary
 
-EDUCATION
-University of Texas-Austin					                  Graduated November 2024       Post Graduate Program in AI & ML: Business Applications (McCombs School of Business)
-Developed strong foundations in statistical learning, and classical machine learning algorithms through hands-on coursework.
-Learned and utilized AI and deep learning techniques, including neural networks, computer vision, natural language processing, and generative AI.
-Coursework included end-to-end projects, from model deployment and recommendation systems, able to do full implementation of AI/ML models from data preprocessing to deployment
-University of Missouri-Columbia 					          Graduated December 2020 Bachelor of Science in Mathematics                                                                                                                                GPA: 3.86                                                                                                                                                                        Relevant Coursework: Probability Theory, Statistical Inference, Algorithm Design II, Numerical Linear Algebra, Financial Derivatives, Machine Learning                                                                                                                                                                                                                                                                                             
+Computer vision and geospatial machine learning researcher with an engineering background in radar systems and healthcare data. Co-author of *Tessellating the Earth* (ECCV 2026) and lead author of a paper on efficient retrieval for planet-scale image geolocalization, now under review. M.S. in Computer Science from WashU (2026), B.S. in Mathematics from the University of Missouri (2020).
 
-RESEARCH EXPERIENCE
-RESEARCH FELLOW                                               	                                                   May 2019 - May 2021 
-Dr. Ozden Behavioral Neuroscience Research Lab, University of Missouri                                             
-Created open source ‘control center’ for conducting behavioral neuroscience experiments
-Programmed system in Python & C while using low-cost Arduino microcontroller – device cost 85% lower than commercial solutions 
-Designed and manufactured PCB for necessary custom circuitry
-Implemented software and hardware optimizations - latency 87.5% lower than commercial solutions 
-Maintained GitHub with associated code and hardware info 
-Presented project at two national scientific meetings
+## Experience
 
-RESEARCH ASSISTANT	                                                                                            August 2017 - April 2019 
-Dr. Milescu Computational Neuroscience Research Lab, University of Missouri                               
-Fixed bugs and added features to Delphi-based ion-channel simulation program QuB 
-Utilized 2-photon imaging to run electrophysiology experiments
-Maintained and migrated Milescu Lab official website
+### Research Associate — Multimodal Vision Research Lab, Washington University in St. Louis
+*Nov 2025 – present* (graduate researcher from Nov 2025; research associate after the M.S.). Advisor: Nathan Jacobs.
 
-RESEARCH ASSISTANT 	                                                                                     May 2016 - August 2016
-Dr. Stark Occupational Therapy Lab, Washington University                                                         
-Analyzed trends in Alzheimer's study patient retention using IBM SPSS software.
-Cleaned and corrected a 5000+ patient dataset.
-Conducted hypothesis testing, ANOVA, and Chi-Squared testing.
-Investigated the link between patient distance and study retention using Google Maps API and regression analysis.
-Results of a pilot study were presented at the International Association of Gerontology and Geriatrics (IAGG) 2017 World Conference.
+- Co-authored *Tessellating the Earth* (ECCV 2026): a location encoder built from learnable spherical Voronoi partitions with shared global semantic tokens; state of the art across geospatial classification and regression benchmarks.
+- Lead a project on efficient retrieval for planet-scale image geolocalization: hierarchical search over a multiresolution gallery that matches exhaustive retrieval at a fraction of the encoding cost and extends to object-level queries. Paper under review.
+- Train contrastive CLIP-style vision transformers on large-scale multispectral satellite imagery; distributed experiments on SLURM with PyTorch Lightning; cross-modal retrieval pipelines over hierarchical geospatial tiles.
 
+### Chief Scientist — 1088 Advisors (higher-education strategy consultancy)
+*May 2026 – present*
 
-PRESENTATIONS
-Iqbal, Hamza, (2019, November). A Low-cost, Open-source Control and Timing System for Training Animals on Behavioral Tasks. Poster presented at the annual Society for Neuroscience Conference (SFN), Chicago, Illinois
-Iqbal, Hamza, (2019, October). A Low-cost, Open-source Control and Timing System for Training Animals on Behavioral Tasks. Poster presented at the Annual Biomedical Research Conference for Minority Students (ABRCMS), Anaheim California
+- Lead the data and AI practice; designed and built the analytics platform behind research-strategy diagnostics and innovation scans for research universities.
+- Collectors and a data lake over NSF HERD, OpenAlex, USPTO, NIH RePORTER and AUTM data; peer benchmarking of research expenditures, output, funding mix and technology transfer.
+- Topic clustering of institutional research portfolios (SPECTER2 embeddings, BERTopic, Leiden); automated LaTeX and PowerPoint report builders.
+
+### Systems Engineer — Uhnder, Inc., Austin, TX
+*Jan 2022 – Feb 2025* · digital-code-modulation automotive radar
+
+- Wrote and owned PySCOTT, a link-budget and scan-configuration modeling tool (Python, Dash) predicting SNR across range, Doppler and angle from simulated or measured antenna patterns; its curves set production test limits and drove customer coverage maps.
+- Automated test and validation pipelines with 2D/3D coverage visualizations for sensor characterization across hardware configurations (turntables, interference simulation, close-range experiments).
+- Link-budget modeling for URA/ULA and sparse-array configurations; DSP-pipeline diagnostics for noise floor, signal magnitude, vector misalignment and phase mismatch.
+- ML classification of false alarms, multipath and interference in real-time detections; company-wide bench-test CLI; automated software testing during active development.
+
+### Data Engineer (contract) — Vitana LLC, remote
+*Feb – Aug 2023*
+
+- Converted HL7v2.x lab results to FHIR and integrated them with PracticeFusion EMR records in PostgreSQL and MongoDB.
+- Spark ETL pipelines consolidating labs, billing and patient records into a queryable data lake with Apache Superset; HIPAA-aware.
+
+### Research Assistant & Data Manager — Stark Lab, Program in Occupational Therapy, WashU School of Medicine
+*Jan 2021 – Jan 2022*
+
+- Managed clinical datasets for fall-prevention and Alzheimer's studies with the Knight ADRC; cleaned and structured 5,000+ participant records for cohort selection.
+- Statistical analyses of health-outcome and time-series data (Python, MATLAB, SPSS); data dictionaries and cross-instrument merges; REDCap safeguards against data-entry errors.
+
+## Education
+
+- **M.S. in Computer Science**, Washington University in St. Louis, Aug 2025 – May 2026. Coursework: Bayesian ML, large language models, advanced computer vision, deep reinforcement learning, text mining, data mining, information theory, rapid prototyping. Teaching assistant, CSE 4470: Automata & Theory of Computation (Spring 2026).
+- **Post Graduate Program in AI & ML: Business Applications**, McCombs School of Business, UT Austin, Mar – Nov 2024.
+- **B.S. in Mathematics**, University of Missouri, Columbia, Dec 2020. GPA 3.86.
+
+## Earlier research
+
+- **Research Fellow, Ozden Lab (behavioral neuroscience), University of Missouri**, May 2019 – May 2021. Low-cost, open-source control and timing system for behavioral experiments (Python/C, Arduino, custom PCB): 85% cheaper and 87.5% lower latency than the commercial alternative. Frequency-domain analysis of 3+ TB of mouse EEG. IMSD fellow.
+- **Research Assistant, Milescu Lab (computational neuroscience), University of Missouri**, Aug 2017 – Apr 2019. QuB ion-channel simulation software (Delphi); two-photon electrophysiology; low-cost multispectral imaging; lab website migration to Google Cloud.
+- **Summer Research Student (STARS), Stark Lab, WashU**, Summer 2016. Participant retention in Knight ADRC studies; presented at IAGG 2017.
+
+## Publications & presentations
+
+- Daniel Cher, **Hamza Iqbal**, Eric Xing, Brian Wei, Nathan Jacobs. *Tessellating the Earth: Learnable Spherical Voronoi Partitions for Location Encoding.* ECCV 2026. [arXiv](https://arxiv.org/abs/2606.27514) · [code](https://github.com/mvrl/TTE) · [ECCV page](https://eccv.ecva.net/virtual/2026/poster/5452) · [talk](https://www.youtube.com/watch?v=YXPyIUUMC_4)
+- **Hamza Iqbal** et al. Efficient retrieval for planet-scale image geolocalization. Under review, 2026; title withheld during double-blind review.
+- *A Low-cost, Open-source Control and Timing System for Training Animals on Behavioral Tasks.* Posters, SfN 2019 (Chicago) and ABRCMS 2019 (Anaheim).
+- Pilot study of participant retention in Alzheimer's disease research. IAGG 2017 World Congress.
+
+## Skills
+
+- **Languages:** Python, SQL, C/C++, JavaScript, MATLAB, Java, R, LaTeX
+- **ML & vision:** PyTorch, PyTorch Lightning, Hugging Face, CLIP and contrastive learning, vision transformers, DINOv2, OpenCV, retrieval
+- **NLP & agents:** SPECTER2, BERTopic, LangGraph, LangChain, RAG, evaluation harnesses
+- **Data engineering:** Spark, pandas, NumPy, SciPy, PostgreSQL, MongoDB, MySQL/MariaDB, Superset, HL7v2, FHIR, REDCap
+- **Infrastructure:** Linux, SLURM/HPC, Docker, Git, AWS (EC2, S3), GCP, REST APIs, Dash/Plotly
+- **Signal processing & hardware:** radar link budgets and DSP diagnostics, spectrum analyzers, signal generators, Arduino, Raspberry Pi, PCB design (Eagle), CAD, 3D printing
