@@ -392,3 +392,58 @@ html.js .reveal.in { opacity: 1; transform: none; }
 .cv-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px 32px; }
 .cv-head .links { margin-top: 12px; }
 .edu-note { font-size: 14px; color: var(--muted); }
+
+/* ---------- visual project stories ---------- */
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.project-card { padding: 0; overflow: hidden; }
+.project-art { display: block; background: #0d1228; border-bottom: 1px solid var(--line); }
+.project-art img { display: block; width: 100%; height: auto; aspect-ratio: 12 / 7; object-fit: contain; }
+.project-art.poster { padding: 18px; }
+.project-art.poster img { object-fit: contain; }
+.project-copy { display: flex; flex: 1; flex-direction: column; padding: 24px; }
+.project-copy h3 { font-family: var(--font-head); font-size: 24px; line-height: 1.2; }
+.project-copy h3 a { color: var(--heading); }
+.project-copy h3 a:hover { color: var(--accent); }
+.project-copy .card-links { margin-top: 20px; }
+.project-copy .project-kind { font-size: 12px; color: var(--muted); margin-top: 12px; }
+.project-nav { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 24px 0 16px; font-size: 13px; }
+.project-nav a { border-bottom: 1px dotted var(--line-strong); }
+.work-intro { max-width: 64ch; margin-bottom: 26px; color: var(--muted); }
+.case-hero { padding-bottom: 30px; }
+.case-hero .lede { max-width: 65ch; }
+.case-hero h1 { max-width: 24ch; }
+.case-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 20px; font-size: 13px; color: var(--muted); }
+.case-figure { margin: 0 0 32px; }
+.case-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line-strong); background: #0d1228; }
+.case-figure figcaption { margin-top: 12px; font-size: 12px; line-height: 1.6; color: var(--muted); max-width: 85ch; }
+.case-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(240px, .48fr); gap: 46px; }
+.case-body h2 { font-family: var(--font-head); font-size: 26px; letter-spacing: -.02em; margin-bottom: 16px; }
+.case-body h3 { font-family: var(--font-head); font-size: 19px; margin: 25px 0 8px; }
+.case-body p, .case-body li { font-size: 15px; }
+.case-sidebar { align-self: start; padding: 22px; background: var(--panel); border: 1px solid var(--line); }
+.case-sidebar h2 { font-family: var(--font-display); font-size: 11px; letter-spacing: .08em; }
+.case-sidebar dl { margin: 0; }
+.case-sidebar dt { margin-top: 20px; font-size: 12px; color: var(--accent); }
+.case-sidebar dt:first-child { margin-top: 0; }
+.case-sidebar dd { margin: 5px 0 0; font-size: 14px; }
+.case-sidebar .card-links { margin-top: 24px; }
+.small-projects { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 25px; }
+.small-projects article { padding-top: 18px; border-top: 1px solid var(--line-strong); }
+.small-projects h3 { font-family: var(--font-head); font-size: 19px; }
+.small-projects p { font-size: 14px; }
+.availability { font-size: 13px; color: var(--accent-2); margin-top: 22px; }
+@media (max-width: 760px) {
+  .project-grid, .case-body { grid-template-columns: 1fr; }
+  .case-body { gap: 28px; }
+  .project-copy { padding: 21px; }
+  .project-copy h3 { font-size: 23px; }
+  .small-projects { grid-template-columns: 1fr; gap: 12px; }
+}
+@media print {
+  .project-grid, .case-body { grid-template-columns: 1fr; }
+  .card, .case-figure { break-inside: avoid; }
+}
+
+.earlier-projects { margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line); }
+.earlier-projects summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+.earlier-projects .small-projects { margin-top: 20px; }

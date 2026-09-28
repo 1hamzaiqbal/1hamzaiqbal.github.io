@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HospTrack / Nursor · Hamza Iqbal</title>
+  <meta name="description" content="A hospital-workflow prototype connecting a spatial ward view, patient charts and natural-language navigation.">
+  <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');document.documentElement.classList.add('js');})();</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&amp;family=Silkscreen&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' shape-rendering='crispEdges'%3E%3Crect width='16' height='16' fill='%23070a17'/%3E%3Cpath fill='%23f2c76d' d='M7 2h2v4h4v2h-4v4H7V8H3V6h4z'/%3E%3C/svg%3E">
+</head>
+<body id="top" data-page="projects">
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="site">
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="px-star" aria-hidden="true"></span>hamza iqbal</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="../about.html" data-nav="about">About</a>
+      <a href="../research.html" data-nav="research">Research</a>
+      <a href="../projects.html" data-nav="projects">Projects</a>
+      <a href="../resume.html" data-nav="cv">CV</a>
+      <a href="../thoughts.html" data-nav="writing">Writing</a>
+    </nav>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Toggle day and night theme" title="Day / night">
+        <svg class="icon-moon" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M2 0h3v1H3v1H2v4h1v1h2v1H2V7H1V6H0V2h1V1h1z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 8 8" shape-rendering="crispEdges" aria-hidden="true"><path fill="currentColor" d="M3 0h2v1H3zM0 3h1v2H0zM7 3h1v2H7zM3 7h2v1H3zM2 2h4v4H2zM1 1h1v1H1zM6 1h1v1H6zM1 6h1v1H1zM6 6h1v1H6z"/></svg>
+      </button>
+  </div>
+</header>
+
+<main>
+  <section class="page-head case-hero"><div class="wrap">
+    <p class="eyebrow">AI interfaces &middot; hackathon prototype</p>
+<h1>HospTrack / Nursor</h1>
+<p class="lede">A hospital-workflow prototype connecting a spatial ward view, patient charts and natural-language navigation.</p>
+    <div class="case-meta"><span>Prototype using synthetic records</span></div>
+  </div>
+</section>
+  <section class="section"><div class="wrap">
+    <figure class="case-figure"><img src="../pictures/projects/hosptrack.svg" alt="Synthetic ward layout connects a selected room to patient-chart briefings and natural-language interface commands." width="960" height="560"><figcaption>Architecture sketch using synthetic records.</figcaption></figure>
+    <div class="case-body"><div><h2>Making context easier to navigate</h2>
+<p>A patient list, a chart and a floor plan each reveal a different part of a hospital workflow. This prototype brings those views together, with a 3D/2D spatial interface and AI-assisted chart briefings.</p>
+<h3>What I built</h3>
+<ul class="bullets"><li>A React and Three.js interface for exploring wards and selecting synthetic patient records.</li>
+<li>Gemini-generated chart briefings, with caching and batched preload to avoid repeating the same requests.</li>
+<li>A natural-language command bar that translates requests into structured interface actions.</li>
+</ul>
+<h3>The engineering focus</h3>
+<p>The project connects model output to a bounded set of UI actions. It also makes spatial context useful without forcing the user to navigate the entire workflow in 3D.</p>
+<a class="back" href="../projects.html">&larr; All projects</a></div>
+    <aside class="case-sidebar"><h2>Project details</h2>
+<dl><dt>Focus</dt>
+<dd>AI interfaces &middot; hackathon prototype</dd>
+<dt>Built with</dt>
+<dd>React, TypeScript, Three.js / React Three Fiber, Gemini</dd>
+<dt>Status</dt>
+<dd>Prototype using synthetic records</dd>
+</dl>
+<div class="card-links"><a href="https://github.com/1hamzaiqbal/hosp-track/tree/charge-nurse-mode" target="_blank" rel="noopener">Public code &rarr;</a></div>
+</aside>
+</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <svg class="horizon" viewBox="0 0 100 12" preserveAspectRatio="none" aria-hidden="true">
+    <path class="far" d="M0 12 V8 H6 V6 H10 V7 H16 V4 H20 V5 H26 V8 H34 V6 H40 V3 H44 V5 H50 V7 H58 V5 H62 V6 H70 V4 H76 V6 H84 V8 H90 V5 H94 V7 H100 V12 Z"/>
+    <path class="near" d="M0 12 V10 H8 V9 H14 V10 H24 V8 H30 V9 H42 V10 H52 V8 H56 V9 H66 V10 H78 V9 H86 V10 H100 V12 Z"/>
+  </svg>
+  <div class="foot">
+    <div class="wrap">
+      <span>&copy; <span data-year>2026</span> Hamza Iqbal</span>
+      <div class="flinks">
+        <a href="mailto:1hamzaiqbal@gmail.com">Email</a>
+        <a href="https://github.com/1hamzaiqbal" target="_blank" rel="me noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/1hamzaiqbal" target="_blank" rel="me noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=mU-xTzAAAAAJ" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://orcid.org/0000-0002-3814-9113" target="_blank" rel="me noopener">ORCID</a>
+      </div>
+      <a class="totop" href="#top">&#9650; top</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

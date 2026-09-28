@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects · Hamza Iqbal</title>
-  <meta name="description" content="Projects by Hamza Iqbal: Tessellating the Earth, efficient retrieval for image geolocalization, PySCOTT radar tooling, research-analytics pipelines, and side projects.">
+  <meta name="description" content="Selected projects by Hamza Iqbal: machine learning evaluation, reinforcement learning, AI interfaces, full-stack products, published research and radar engineering.">
   <script>(function(){var t;try{t=localStorage.getItem('theme')}catch(e){}document.documentElement.setAttribute('data-theme',t==='light'?'light':'dark');document.documentElement.classList.add('js');})();</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,125 +34,100 @@
   </div>
 </header>
 
-<main>
-  <section class="page-head">
-    <div class="wrap">
-      <p class="eyebrow">Projects</p>
-      <h1>Things I&rsquo;ve built</h1>
-      <p class="lede">Research code, engineering tools, and a few things made for fun. Some of it is private to a lab or an employer; those entries are described rather than linked.</p>
-    </div>
-  </section>
-
-  <section class="section reveal" id="research-tools">
-    <div class="wrap">
-      <div class="section-head"><h2><span class="num">01</span>Research &amp; tools</h2></div>
-      <div class="grid">
-        <article class="card">
-          <div class="kicker">MVRL &middot; under review</div>
-          <h3>Hierarchical retrieval for geolocalization</h3>
-          <p>Efficient retrieval for planet-scale image geolocalization. Instead of encoding a query against every tile, the gallery is organized hierarchically and a learned model decides which regions to refine, so recall matches exhaustive search at a fraction of the cost. Name and details withheld while the paper is under review.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">retrieval</span><span class="tag">pytorch</span><span class="tag">slurm</span></div>
-          <div class="card-links"><a class="arrow" href="research.html#geolocalization-retrieval">more</a></div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">MVRL &middot; ECCV 2026</div>
-          <h3>Tessellating the Earth</h3>
-          <p>Location encoder built from learnable spherical Voronoi partitions, with shared global semantic tokens distilled from satellite imagery. Released with code and pretrained weights.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">location encoding</span><span class="tag">pytorch</span></div>
-          <div class="card-links">
-            <a href="https://github.com/mvrl/TTE" target="_blank" rel="noopener">code</a>
-            <a href="https://huggingface.co/MVRL/TTE" target="_blank" rel="noopener">weights</a>
-            <a class="arrow" href="research.html#tte">paper</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">Uhnder &middot; 2022 &ndash; 2025</div>
-          <h3>PySCOTT</h3>
-          <p>Scan configuration and link-budget tool for digital-code-modulation radar. Models theoretical SNR across range, Doppler, azimuth and elevation from simulated or measured antenna patterns, with a Dash GUI. Its curves became the basis for production test limits and customer coverage maps.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">radar</span><span class="tag">python</span><span class="tag">dash</span></div>
-          <div class="card-links"><a class="arrow" href="projects/pyscott.html">read more</a></div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">1088 Advisors &middot; 2026</div>
-          <h3>Research-enterprise analytics</h3>
-          <p>Data platform behind university research-strategy diagnostics: collectors for NSF HERD, OpenAlex, USPTO and NIH RePORTER, peer benchmarking, topic clustering of a campus&rsquo;s output with SPECTER2 embeddings, BERTopic and Leiden communities, and report builders that emit LaTeX and PowerPoint.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">data engineering</span><span class="tag">nlp</span><span class="tag">private</span></div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">Vitana &middot; 2023</div>
-          <h3>HL7v2 &rarr; FHIR pipeline</h3>
-          <p>Converted HL7v2.x lab results to FHIR resources and joined them with PracticeFusion EMR records into PostgreSQL and MongoDB; Spark ETL consolidating labs, billing and patient records into a queryable data lake with Apache Superset on top.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">healthcare</span><span class="tag">spark</span><span class="tag">private</span></div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">Ozden Lab &middot; 2019 &ndash; 2021</div>
-          <h3>Open-source behavioral control center</h3>
-          <p>Arduino-based control and timing system for training animals on behavioral tasks, with a custom PCB and Python/C firmware. 85% cheaper and 87.5% lower latency than the commercial system it replaced. Presented at SfN and ABRCMS 2019.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">hardware</span><span class="tag">arduino</span><span class="tag">neuroscience</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section reveal" id="side">
-    <div class="wrap">
-      <div class="section-head"><h2><span class="num">02</span>Side projects &amp; coursework</h2></div>
-      <div class="grid">
-        <article class="card">
-          <div class="kicker">Hackathon</div>
-          <h3>HospTrack</h3>
-          <p>Real-time dashboard for patient locations and status inside a hospital, with a 3D ward view in Three.js and a Node.js backend serving patient data over REST.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">three.js</span><span class="tag">node</span></div>
-          <div class="card-links"><a href="https://github.com/1hamzaiqbal/hosp-track" target="_blank" rel="noopener">code</a></div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">Deep RL &middot; Spring 2026</div>
-          <h3>RL on RL</h3>
-          <p>Reinforcement learning for Rocket League: PPO agents bootstrapped from human replay data, built for the deep RL course with SeongJun Kwon and Edwardsen James.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">ppo</span><span class="tag">pytorch</span><span class="tag">private</span></div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">LLMs &middot; 2026</div>
-          <h3>probing-llm-math</h3>
-          <p>Interpretability experiments probing how language models represent arithmetic and mathematical reasoning internally, with evaluation harnesses for validating model behavior.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">interpretability</span><span class="tag">python</span></div>
-          <div class="card-links"><a href="https://github.com/1hamzaiqbal/probing-llm-math" target="_blank" rel="noopener">code</a></div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">From scratch</div>
-          <h3>GPT-2 on FineWeb</h3>
-          <p>A local GPT-2 training run on FineWeb: data preparation, tokenization, training loop and evaluation, end to end, to understand what the tutorials leave out.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">transformers</span><span class="tag">pytorch</span></div>
-        </article>
-
-        <article class="card">
-          <div class="kicker">Cloud</div>
-          <h3>Forum &amp; chat app</h3>
-          <p>A chatroom and mock forum deployed on AWS (EC2 for the app, S3 for static assets) and again on GCP, mostly as an excuse to learn both.</p>
-          <div class="spacer"></div>
-          <div class="tags"><span class="tag">aws</span><span class="tag">gcp</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
+<main><section class="page-head"><div class="wrap"><p class="eyebrow">Projects</p>
+<h1>From experiments to useful software</h1>
+<p class="lede">Model training, careful evaluation, and interfaces that make complex systems easier to use. A selection of research, engineering and personal work.</p>
+<nav class="project-nav" aria-label="Project sections"><a href="#side">Software &amp; experiments</a><a href="#research-tools">Published research &amp; engineering</a><a href="#more">More work</a></nav>
+</div>
+</section>
+<section class="section" id="side"><div class="wrap"><div class="section-head"><h2><span class="num">01</span>Software &amp; experiments</h2>
+</div>
+<div class="project-grid"><article class="card project-card"><a class="project-art" href="projects/legalrag.html" tabindex="-1" aria-hidden="true"><img src="pictures/projects/retrieval-evaluation.svg" alt="" width="960" height="560" loading="lazy"></a><div class="project-copy"><div class="kicker">LLM evaluation &middot; public code</div>
+<h3><a href="projects/legalrag.html">When retrieval helps</a></h3>
+<p>A multi-model QA harness that separates retrieval quality from answer accuracy and tracks the cost of each question.</p>
+<div class="spacer"></div>
+<div class="tags"><span class="tag">RAG</span><span class="tag">Python</span><span class="tag">evaluation</span></div>
+<div class="card-links"><a class="arrow" href="projects/legalrag.html">Case study</a><a href="https://github.com/1hamzaiqbal/LegalRagAgent/tree/codex/three_dial" target="_blank" rel="noopener">Code</a></div>
+</div></article>
+<article class="card project-card"><a class="project-art" href="projects/hosptrack.html" tabindex="-1" aria-hidden="true"><img src="pictures/projects/hosptrack.svg" alt="" width="960" height="560" loading="lazy"></a><div class="project-copy"><div class="kicker">AI interfaces &middot; prototype</div>
+<h3><a href="projects/hosptrack.html">HospTrack / Nursor</a></h3>
+<p>A spatial hospital-workflow prototype with AI chart briefings and natural-language navigation across synthetic records.</p>
+<div class="spacer"></div>
+<div class="tags"><span class="tag">React</span><span class="tag">Three.js</span><span class="tag">Gemini</span></div>
+<div class="card-links"><a class="arrow" href="projects/hosptrack.html">Case study</a><a href="https://github.com/1hamzaiqbal/hosp-track/tree/charge-nurse-mode" target="_blank" rel="noopener">Code</a></div>
+</div></article>
+<article class="card project-card"><a class="project-art" href="projects/rl-on-rl.html" tabindex="-1" aria-hidden="true"><img src="pictures/projects/rl-on-rl.svg" alt="" width="960" height="560" loading="lazy"></a><div class="project-copy"><div class="kicker">Reinforcement learning &middot; team project</div>
+<h3><a href="projects/rl-on-rl.html">Demonstrations to self-play</a></h3>
+<p>A Rocket League pipeline for behavior-cloning pretraining, PPO self-play and controlled teacher-guidance experiments.</p>
+<div class="spacer"></div>
+<div class="tags"><span class="tag">PyTorch</span><span class="tag">PPO</span><span class="tag">RLGym</span></div>
+<div class="card-links"><a class="arrow" href="projects/rl-on-rl.html">Case study</a></div>
+</div></article>
+<article class="card project-card"><a class="project-art" href="projects/intendo.html" tabindex="-1" aria-hidden="true"><img src="pictures/projects/intendo.svg" alt="" width="960" height="560" loading="lazy"></a><div class="project-copy"><div class="kicker">Full-stack product &middot; private app</div>
+<h3><a href="projects/intendo.html">Intendo</a></h3>
+<p>A deliberate daily planner with transactional history, revision-checked saves and an agent CLI that previews and verifies changes.</p>
+<div class="spacer"></div>
+<div class="tags"><span class="tag">TypeScript</span><span class="tag">Cloudflare</span><span class="tag">SQLite</span></div>
+<div class="card-links"><a class="arrow" href="projects/intendo.html">Case study</a></div>
+</div></article>
+</div>
+</div></section>
+<section class="section" id="research-tools"><div class="wrap"><div class="section-head"><h2><span class="num">02</span>Research &amp; engineering</h2>
+</div>
+<div class="project-grid"><article class="card project-card"><a class="project-art poster" href="research.html#tte" tabindex="-1" aria-hidden="true"><img src="pictures/tte_poster_thumb.jpg" alt="" width="960" height="560" loading="lazy"></a><div class="project-copy"><div class="kicker">ECCV 2026 &middot; published research</div>
+<h3><a href="research.html#tte">Tessellating the Earth</a></h3>
+<p>A location encoder with learnable spherical partitions. Co-authored research with public code and pretrained weights.</p>
+<div class="spacer"></div>
+<div class="tags"><span class="tag">computer vision</span><span class="tag">PyTorch</span></div>
+<div class="card-links"><a class="arrow" href="research.html#tte">Research &amp; paper</a><a href="https://github.com/mvrl/TTE" target="_blank" rel="noopener">Code</a></div>
+</div></article>
+<article class="card project-card"><a class="project-art" href="projects/pyscott.html" tabindex="-1" aria-hidden="true"><img src="pictures/projects/pyscott.svg" alt="" width="960" height="560" loading="lazy"></a><div class="project-copy"><div class="kicker">Radar engineering &middot; Uhnder</div>
+<h3><a href="projects/pyscott.html">PySCOTT</a></h3>
+<p>A Python/Dash modeling tool whose predictions informed production test limits and customer coverage maps.</p>
+<div class="spacer"></div>
+<div class="tags"><span class="tag">Python</span><span class="tag">Dash</span><span class="tag">signal processing</span></div>
+<div class="card-links"><a class="arrow" href="projects/pyscott.html">Case study</a></div>
+</div></article>
+</div>
+</div></section>
+<section class="section" id="more"><div class="wrap"><div class="section-head"><h2><span class="num">03</span>More work</h2>
+</div>
+<div class="grid">
+<article class="card"><div class="kicker">MVRL &middot; under review</div>
+<h3>Hierarchical image retrieval</h3>
+<p>Research and engineering for efficient image geolocalization: model training, embedding caches, budget-aware search and reproducible evaluation. Title, code and results remain withheld during review.</p>
+<div class="card-links"><a href="research.html#geolocalization-retrieval">Research context &rarr;</a></div>
+</article>
+<article class="card"><div class="kicker">1088 Advisors &middot; 2026</div>
+<h3>Research-enterprise analytics</h3>
+<p>Public funding, publication and patent data assembled into university benchmarks, embedding-based research clusters and automated reports.</p>
+<div class="tags"><span class="tag">data engineering</span><span class="tag">NLP</span></div>
+</article>
+<article class="card"><div class="kicker">Vitana &middot; 2023</div>
+<h3>Healthcare data pipelines</h3>
+<p>Spark ETL connecting HL7v2 lab results, FHIR resources and EMR records in PostgreSQL and MongoDB, with Apache Superset for exploration.</p>
+<div class="tags"><span class="tag">Spark</span><span class="tag">FHIR</span></div>
+</article>
+<article class="card"><div class="kicker">Ozden Lab &middot; 2019&ndash;2021</div>
+<h3>Behavioral experiment controller</h3>
+<p>A Python/C and Arduino control system with a custom PCB: 85% lower cost and 87.5% lower latency than the commercial alternative. Presented at SfN and ABRCMS 2019.</p>
+<div class="tags"><span class="tag">firmware</span><span class="tag">hardware</span></div>
+</article>
+</div>
+<details class="earlier-projects"><summary>Earlier experiments &amp; coursework</summary>
+<div class="small-projects"><article><h3>Probing LLM math</h3>
+<p>Experiments on internal representations in mathematical reasoning.</p>
+<a href="https://github.com/1hamzaiqbal/probing-llm-math" target="_blank" rel="noopener">Code &rarr;</a></article>
+<article><h3>GPT-2 on FineWeb</h3>
+<p>A training exercise spanning data preparation, tokenization, the training loop and evaluation.</p>
+</article>
+<article><h3>Cloud forum &amp; chat</h3>
+<p>Coursework deployed on AWS and GCP to explore hosting, storage and backend development.</p>
+</article>
+</div>
+</details>
+</div>
+</section>
 </main>
 
 <footer>
@@ -162,7 +137,7 @@
   </svg>
   <div class="foot">
     <div class="wrap">
-      <span>&copy; <span data-year>2026</span> Hamza Iqbal &middot; St. Louis, MO</span>
+      <span>&copy; <span data-year>2026</span> Hamza Iqbal</span>
       <div class="flinks">
         <a href="mailto:1hamzaiqbal@gmail.com">Email</a>
         <a href="https://github.com/1hamzaiqbal" target="_blank" rel="me noopener">GitHub</a>
