@@ -12,20 +12,20 @@ Computer vision and geospatial machine learning researcher with an engineering b
 ## Experience
 
 ### Research Associate — Multimodal Vision Research Laboratory, Washington University in St. Louis
-*May 2026 – present* (graduate researcher from Nov 2025; research associate since completing the M.S.). Advisor: Nathan Jacobs.
+*May 2026 – present* (graduate researcher from Nov 2025; research associate since completing the M.S.). PI: Dr. Nathan Jacobs.
 
 - Co-authored *Tessellating the Earth* (ECCV 2026): a location encoder built from learnable spherical Voronoi partitions with shared global semantic tokens; state of the art across geospatial classification and regression benchmarks.
 - Lead a project on efficient retrieval for planet-scale image geolocalization: hierarchical search over a multiresolution gallery that supports image and object-level queries with budget-aware search. Paper under review.
 - Train contrastive CLIP-style vision transformers on large-scale multispectral satellite imagery; run experiments on SLURM clusters with PyTorch Lightning; build cross-modal (text-to-image, image-to-image) retrieval pipelines over hierarchical geospatial tiles.
 
-### Chief Scientist — 1088 Advisors (higher-education strategy consultancy)
+### Chief Scientist — 1088 Advisors (higher education consultancy)
 *June 2026 – present*
 
 - Lead the data and AI practice; designed and built the analytics platform behind research-strategy diagnostics and innovation scans for research universities.
 - Collectors and a data lake over NSF HERD, OpenAlex, USPTO, NIH RePORTER and AUTM data; peer benchmarking of research expenditures, output, funding mix and technology transfer.
 - Topic clustering of institutional research portfolios (SPECTER2 embeddings, BERTopic, Leiden); automated LaTeX and PowerPoint report builders.
 
-### Systems Engineer — Uhnder, Inc., Austin, TX
+### Systems Engineer — Uhnder, Inc. (chip design and radar startup), Austin, TX
 *Jan 2022 – Mar 2025* · digital-code-modulation automotive radar
 
 - Wrote and owned PySCOTT, a link-budget and scan-configuration modeling tool (Python, Dash) predicting SNR across range, Doppler and angle from simulated or measured antenna patterns; its curves set production test limits and drove customer coverage maps.
@@ -33,14 +33,14 @@ Computer vision and geospatial machine learning researcher with an engineering b
 - Link-budget modeling for URA/ULA and sparse-array configurations; DSP-pipeline diagnostics for noise floor, signal magnitude, vector misalignment and phase mismatch.
 - ML classification of false alarms, multipath and interference in real-time detections; company-wide bench-test CLI; automated software testing during active development.
 
-### Data Engineer (contract) — Vitana LLC, remote
+### Data Engineer (contract) — Vitana LLC (healthcare startup), remote
 *Mar – Aug 2023*
 
 - Converted HL7v2.x lab results to FHIR and integrated them with PracticeFusion EMR records in PostgreSQL and MongoDB.
 - Spark ETL pipelines consolidating labs, billing and patient records into a queryable data lake with Apache Superset; HIPAA-aware.
 
-### Research Assistant — Stark Lab, Program in Occupational Therapy, WashU School of Medicine
-*Jan 2021 – Jan 2022*
+### Research Assistant — PEPL Lab, Program in Occupational Therapy, WashU School of Medicine
+*Jan 2021 – Jan 2022*. PI: Dr. Susy Stark.
 
 - Cleaned and merged clinical study data across instruments and study arms; maintained data dictionaries for analysis.
 - Analyzed health outcomes (Python, MATLAB, SPSS); added REDCap filters and conditionals to reduce recurring data-entry errors.
